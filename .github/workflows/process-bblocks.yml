@@ -20,14 +20,19 @@ jobs:
     name: Validate and process
     uses: opengeospatial/bblocks-postprocess/.github/workflows/validate-and-process.yml@master
     with:
+      test_outputs_path: build-local/tests
+
       before_postprocess: |
-        echo "build/" >> .git/info/exclude
+        rm -rf build/tests
+        rm -rf build-local/tests
+        git rm -r --cached build/tests build-local/tests 2>/dev/null || true
         echo "build-local/" >> .git/info/exclude
-        echo ".transforms-sandbox/" >> .git/info/exclude
+        echo "build/tests/" >> .git/info/exclude
 
       before_pages: |
+        rm -rf build-local
         rm -rf build/tests
-        find build -type f -size +50M -print -delete || true
+        find . -type f -size +50M -print -delete || true
 
     secrets:
       sparql_username: ${{ secrets.sparql_username }}
