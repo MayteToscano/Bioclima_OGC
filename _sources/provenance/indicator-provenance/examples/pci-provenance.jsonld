@@ -1,5 +1,7 @@
 {
-  "@context": { "@vocab": "http://www.w3.org/ns/prov#" },
+  "@context": {
+    "@vocab": "http://www.w3.org/ns/prov#"
+  },
   "entity": "https://maytetoscano.github.io/Bioclima_OGC/bblock/ogc.bioclima.indicator.pci/examples/pci-finland-2001-2018.covjson",
   "wasDerivedFrom": [
     "https://maytetoscano.github.io/Bioclima_OGC/bblock/ogc.bioclima.ebv.vap-coniferous",
@@ -8,20 +10,20 @@
   "wasGeneratedBy": {
     "activity": "Compute PCI from VAP-DOY cubes",
     "script": "https://maytetoscano.github.io/Bioclima_OGC/_sources/indicator/pci/code/compute.py",
-    "scriptVersion": "1.0.0",
+    "scriptVersion": "afa6b9a04a8f07f161e38f3f70c6bc76f1700d37",
     "recipe": "https://maytetoscano.github.io/Bioclima_OGC/bblock/ogc.bioclima.indicator.pci/recipe.jsonld",
-    "runId": "auto-populated-by-github-actions",
+    "runId": "25916786330",
     "startedAtTime": "2024-11-01T12:00:00Z",
-    "endedAtTime":   "2024-11-01T12:00:30Z",
+    "endedAtTime": "2026-05-15T12:04:02Z",
     "parameters": {
       "coniferous_weight": 0.4,
-      "deciduous_weight":  0.6,
+      "deciduous_weight": 0.6,
       "trend_method": "ordinary-least-squares",
       "min_valid_years": 8
     }
   },
   "wasAttributedTo": {
     "agent": "github://maytetoscano/Bioclima_OGC/.github/workflows/recompute-indicators.yml",
-    "type":  "SoftwareAgent"
+    "type": "SoftwareAgent"
   }
 }
