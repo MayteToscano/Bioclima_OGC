@@ -1,0 +1,42 @@
+{
+  "modified": "2026-05-15T13:28:51.143535",
+  "tooling": {
+    "bblocks-postprocess": {
+      "commitId": "\"6b01f188cc614cc2e65f4bf86a2623f98f101dfd",
+      "shortCommitId": "\"6b01f1",
+      "date": "2026-05-12T22:31:51+00:00\""
+    }
+  },
+  "gitRepository": "https://github.com/MayteToscano/Bioclima_OGC",
+  "gitHubRepository": "https://github.com/MayteToscano/Bioclima_OGC/blob/main/",
+  "name": "workspace",
+  "baseURL": "https://maytetoscano.github.io/Bioclima_OGC/",
+  "viewerURL": "https://maytetoscano.github.io/Bioclima_OGC/",
+  "validationReport": "https://maytetoscano.github.io/Bioclima_OGC/build/tests/report.html",
+  "validationReportJson": "https://maytetoscano.github.io/Bioclima_OGC/build/tests/report.json",
+  "imports": [
+    "https://opengeospatial.github.io/bblocks/register.json"
+  ],
+  "bblocks": [],
+  "remoteCacheDir": "https://maytetoscano.github.io/Bioclima_OGC/build/annotated/_cache",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://maytetoscano.github.io/Bioclima_OGC/build/register.json",
+      "type": "application/json",
+      "title": "This Building Blocks Register in JSON format"
+    },
+    {
+      "rel": "self",
+      "href": "https://maytetoscano.github.io/Bioclima_OGC/build/bblocks.ttl",
+      "type": "text/turtle",
+      "title": "This Building Blocks Register in RDF Turtle format"
+    },
+    {
+      "rel": "self",
+      "href": "https://maytetoscano.github.io/Bioclima_OGC/build/bblocks.jsonld",
+      "type": "application/ld+json",
+      "title": "This Building Blocks Register in JSON-LD format"
+    }
+  ]
+}
