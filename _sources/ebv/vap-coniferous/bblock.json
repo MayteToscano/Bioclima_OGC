@@ -9,7 +9,6 @@
   "dependsOn": [
     "ogc.bioclima.ebv.ebv-definition",
     "ogc.bioclima.coveragejson.bioclima-coverage",
-    "ogc.bioclima.ontology.ebv-vocabulary",
     "ogc.bioclima.ontology.entity-types"
   ],
   "sources": [
