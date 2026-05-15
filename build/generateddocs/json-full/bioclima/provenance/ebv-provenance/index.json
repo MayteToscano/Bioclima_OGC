@@ -1,0 +1,53 @@
+
+
+{
+  "itemIdentifier": "ogc.bioclima.provenance.ebv-provenance",
+  "name": "EBV Provenance (W3C PROV)",
+  "abstract": "PROV-O encoded lineage for an EBV dataset: raw inputs, processing activity, agent, methodology citation.",
+  "status": "under-development",
+  "dateTimeAddition": "2024-11-01T00:00:00Z",
+  "itemClass": "schema",
+  "register": "bioclima",
+  "version": "0.1.0",
+  "dependsOn": [],
+  "maintainers": [
+    {
+      "name": "BioClima Project",
+      "email": "maite.toscano@upm.es"
+    }
+  ],
+  "tags": [
+    "bioclima",
+    "provenance",
+    "ebv-provenance"
+  ],
+  "shaclShapes": {},
+  "dateOfLastChange": "2024-11-01",
+  "schema": {
+    "application/yaml": "https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/provenance/ebv-provenance/schema.yaml",
+    "application/json": "https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/provenance/ebv-provenance/schema.json"
+  },
+  "sourceSchema": "https://maytetoscano.github.io/Bioclima_OGC/_sources/provenance/ebv-provenance/schema.yaml",
+  "resolvedSchemaProperties": "https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/provenance/ebv-provenance/resolvedProperties.json",
+  "sourceFiles": "https://maytetoscano.github.io/Bioclima_OGC/_sources/provenance/ebv-provenance/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/MayteToscano/Bioclima_OGC/blob/main/build-local/tests/bioclima/provenance/ebv-provenance/",
+  "description": "# EBV Provenance (W3C PROV)\n\nPROV-O record describing the lineage of an EBV dataset: raw inputs (satellite acquisitions), processing activity, agent and methodology citation.\n",
+  "examples": [
+    {
+      "title": "VAP coniferous provenance",
+      "content": "Provenance record for the Finnish coniferous VAP EBV.",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://maytetoscano.github.io/Bioclima_OGC/_sources/provenance/ebv-provenance/examples/vap-coniferous-provenance.jsonld",
+          "code": "{\n  \"@context\": {\n    \"@vocab\": \"http://www.w3.org/ns/prov#\"\n  },\n  \"entity\": \"ogc.bioclima.ebv.vap-coniferous\",\n  \"wasDerivedFrom\": [\n    \"https://laadsweb.modaps.eosdis.nasa.gov/MODIS-Terra-L1B\",\n    \"https://en.ilmatieteenlaitos.fi/satellite-receiving-station-sodankyla\"\n  ],\n  \"wasGeneratedBy\": {\n    \"activity\": \"Derivation of Start-of-VAP from MODIS Fractional Snow Cover\",\n    \"startedAtTime\": \"2020-06-01T00:00:00Z\",\n    \"endedAtTime\": \"2020-11-04T00:00:00Z\",\n    \"hadPlan\": \"https://doi.org/10.1016/j.rse.2013.09.022\"\n  },\n  \"wasAttributedTo\": {\n    \"agent\": \"Kristin B\u00f6ttcher\",\n    \"role\": \"Principal investigator\",\n    \"organization\": \"Finnish Environment Institute (SYKE)\"\n  }\n}",
+          "url": "https://maytetoscano.github.io/Bioclima_OGC/build-local/tests/bioclima/provenance/ebv-provenance/example_1_1.json"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$id: https://maytetoscano.github.io/Bioclima_OGC/bblock/ogc.bioclima.provenance.ebv-provenance/schema.yaml\ntitle: EBV Provenance\ntype: object\nrequired:\n- entity\n- wasGeneratedBy\n- wasAttributedTo\nproperties:\n  entity:\n    type: string\n    format: iri\n  wasDerivedFrom:\n    type: array\n    items:\n      type: string\n      format: iri\n  wasGeneratedBy:\n    type: object\n    required:\n    - activity\n    - startedAtTime\n    - endedAtTime\n    properties:\n      activity:\n        type: string\n      startedAtTime:\n        type: string\n        format: date-time\n      endedAtTime:\n        type: string\n        format: date-time\n      hadPlan:\n        type: string\n        format: iri\n  wasAttributedTo:\n    type: object\n    required:\n    - agent\n    properties:\n      agent:\n        type: string\n      role:\n        type: string\n      organization:\n        type: string\n",
+  "gitRepository": "https://github.com/MayteToscano/Bioclima_OGC",
+  "gitPath": "_sources/provenance/ebv-provenance"
+}

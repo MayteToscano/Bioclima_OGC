@@ -1,0 +1,56 @@
+
+
+{
+  "itemIdentifier": "ogc.bioclima.policy.policy-alignment",
+  "name": "Indicator to Policy Alignment",
+  "abstract": "Describes how a BioClima indicator aligns with KMGBF targets or SDGs: relationship type (informs, measures-progress-on, triggers-action-for, supports-reporting-on), evidence strength and multilingual justification.",
+  "status": "under-development",
+  "dateTimeAddition": "2024-11-01T00:00:00Z",
+  "itemClass": "schema",
+  "register": "bioclima",
+  "version": "0.1.0",
+  "dependsOn": [
+    "ogc.bioclima.indicator.indicator-definition",
+    "ogc.bioclima.policy.kmgbf-target"
+  ],
+  "maintainers": [
+    {
+      "name": "BioClima Project",
+      "email": "maite.toscano@upm.es"
+    }
+  ],
+  "tags": [
+    "bioclima",
+    "policy",
+    "policy-alignment"
+  ],
+  "shaclShapes": {},
+  "dateOfLastChange": "2024-11-01",
+  "schema": {
+    "application/yaml": "https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/policy/policy-alignment/schema.yaml",
+    "application/json": "https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/policy/policy-alignment/schema.json"
+  },
+  "sourceSchema": "https://maytetoscano.github.io/Bioclima_OGC/_sources/policy/policy-alignment/schema.yaml",
+  "resolvedSchemaProperties": "https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/policy/policy-alignment/resolvedProperties.json",
+  "sourceFiles": "https://maytetoscano.github.io/Bioclima_OGC/_sources/policy/policy-alignment/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/MayteToscano/Bioclima_OGC/blob/main/build-local/tests/bioclima/policy/policy-alignment/",
+  "description": "# Indicator to Policy Alignment\n\nDeclares how an indicator aligns with one or more policy targets, with a relationship type, evidence strength and multilingual justification.\n\n## Relationship types\n\n- `measures-progress-on`\n- `informs`\n- `triggers-action-for`\n- `supports-reporting-on`\n",
+  "examples": [
+    {
+      "title": "PCI policy alignment",
+      "content": "How the PCI aligns with KMGBF targets and SDG 15.",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://maytetoscano.github.io/Bioclima_OGC/_sources/policy/policy-alignment/examples/pci-alignment.jsonld",
+          "code": "{\n  \"indicator\": \"https://maytetoscano.github.io/Bioclima_OGC/ontology/indicator/pci\",\n  \"alignments\": [\n    {\n      \"target\": \"https://maytetoscano.github.io/Bioclima_OGC/ontology/policy/kmgbf-target-8\",\n      \"relationship\": \"measures-progress-on\",\n      \"evidenceStrength\": \"direct\",\n      \"justification\": {\n        \"en\": \"Earlier or later onset of the growing season is a primary ecological signal of climate change pressure on boreal ecosystems; PCI quantifies that shift directly.\",\n        \"es\": \"El adelanto o retraso del inicio del periodo vegetativo es una se\u00f1al ecol\u00f3gica primaria de la presi\u00f3n del cambio clim\u00e1tico sobre los ecosistemas boreales; el PCI lo cuantifica directamente.\",\n        \"zh\": \"\u751f\u957f\u5b63\u5f00\u59cb\u7684\u63d0\u524d\u6216\u5ef6\u8fdf\u662f\u6c14\u5019\u53d8\u5316\u5bf9\u5317\u65b9\u751f\u6001\u7cfb\u7edf\u538b\u529b\u7684\u4e3b\u8981\u751f\u6001\u4fe1\u53f7;PCI \u76f4\u63a5\u91cf\u5316\u4e86\u8fd9\u79cd\u53d8\u5316\u3002\",\n        \"ro\": \"Avansul sau \u00eent\u00e2rzierea \u00eenceputului sezonului de cre\u0219tere este un semnal ecologic principal al presiunii schimb\u0103rilor climatice asupra ecosistemelor boreale; PCI cuantific\u0103 aceast\u0103 schimbare direct.\"\n      }\n    },\n    {\n      \"target\": \"https://maytetoscano.github.io/Bioclima_OGC/ontology/policy/sdg-15\",\n      \"relationship\": \"supports-reporting-on\",\n      \"evidenceStrength\": \"contextual\",\n      \"justification\": {\n        \"en\": \"Phenological monitoring is widely accepted as part of the evidence base for SDG 15 reporting on the integrity of terrestrial ecosystems.\",\n        \"es\": \"El seguimiento fenol\u00f3gico est\u00e1 ampliamente aceptado como parte de la base de evidencia para los informes del ODS 15 sobre la integridad de los ecosistemas terrestres.\",\n        \"zh\": \"\u7269\u5019\u76d1\u6d4b\u88ab\u5e7f\u6cdb\u63a5\u53d7\u4e3a\u53ef\u6301\u7eed\u53d1\u5c55\u76ee\u6807 15 \u5173\u4e8e\u9646\u5730\u751f\u6001\u7cfb\u7edf\u5b8c\u6574\u6027\u62a5\u544a\u7684\u8bc1\u636e\u57fa\u7840\u7684\u4e00\u90e8\u5206\u3002\",\n        \"ro\": \"Monitorizarea fenologic\u0103 este larg acceptat\u0103 ca parte din baza de dovezi pentru raportarea ODD 15 privind integritatea ecosistemelor terestre.\"\n      }\n    }\n  ]\n}",
+          "url": "https://maytetoscano.github.io/Bioclima_OGC/build-local/tests/bioclima/policy/policy-alignment/example_1_1.json"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$id: https://maytetoscano.github.io/Bioclima_OGC/bblock/ogc.bioclima.policy.policy-alignment/schema.yaml\ntitle: Policy Alignment\ntype: object\nrequired:\n- indicator\n- alignments\nproperties:\n  indicator:\n    type: string\n    format: iri\n  alignments:\n    type: array\n    minItems: 1\n    items:\n      type: object\n      required:\n      - target\n      - relationship\n      properties:\n        target:\n          type: string\n          format: iri\n        relationship:\n          enum:\n          - informs\n          - measures-progress-on\n          - triggers-action-for\n          - supports-reporting-on\n        evidenceStrength:\n          enum:\n          - direct\n          - indirect\n          - contextual\n        justification:\n          type: object\n",
+  "gitRepository": "https://github.com/MayteToscano/Bioclima_OGC",
+  "gitPath": "_sources/policy/policy-alignment"
+}

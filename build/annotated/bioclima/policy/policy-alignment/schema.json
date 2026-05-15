@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maytetoscano.github.io/Bioclima_OGC/bblock/ogc.bioclima.policy.policy-alignment/schema.yaml",
+  "title": "Policy Alignment",
+  "type": "object",
+  "required": [
+    "indicator",
+    "alignments"
+  ],
+  "properties": {
+    "indicator": {
+      "type": "string",
+      "format": "iri"
+    },
+    "alignments": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "target",
+          "relationship"
+        ],
+        "properties": {
+          "target": {
+            "type": "string",
+            "format": "iri"
+          },
+          "relationship": {
+            "enum": [
+              "informs",
+              "measures-progress-on",
+              "triggers-action-for",
+              "supports-reporting-on"
+            ]
+          },
+          "evidenceStrength": {
+            "enum": [
+              "direct",
+              "indirect",
+              "contextual"
+            ]
+          },
+          "justification": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  }
+}

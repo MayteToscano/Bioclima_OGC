@@ -1,0 +1,12 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://maytetoscano.github.io/Bioclima_OGC/bblock/ogc.bioclima.ebv.vap-coniferous/schema.yaml
+title: VAP Coniferous Finland metadata record
+allOf:
+- $ref: https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/ebv/ebv-definition/schema.yaml
+- type: object
+  properties:
+    ebv_entity:
+      type: object
+      properties:
+        ebv_entity_type:
+          const: https://maytetoscano.github.io/Bioclima_OGC/ontology/entity/coniferous-forest

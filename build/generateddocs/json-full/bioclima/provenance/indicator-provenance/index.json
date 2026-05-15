@@ -1,0 +1,55 @@
+
+
+{
+  "itemIdentifier": "ogc.bioclima.provenance.indicator-provenance",
+  "name": "Indicator Provenance (W3C PROV)",
+  "abstract": "PROV-O record for a computed indicator: references EBV inputs, the Python implementation by URL, the git commit hash and the GitHub Actions run id.",
+  "status": "under-development",
+  "dateTimeAddition": "2024-11-01T00:00:00Z",
+  "itemClass": "schema",
+  "register": "bioclima",
+  "version": "0.1.0",
+  "dependsOn": [
+    "ogc.bioclima.provenance.ebv-provenance"
+  ],
+  "maintainers": [
+    {
+      "name": "BioClima Project",
+      "email": "maite.toscano@upm.es"
+    }
+  ],
+  "tags": [
+    "bioclima",
+    "provenance",
+    "indicator-provenance"
+  ],
+  "shaclShapes": {},
+  "dateOfLastChange": "2024-11-01",
+  "schema": {
+    "application/yaml": "https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/provenance/indicator-provenance/schema.yaml",
+    "application/json": "https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/provenance/indicator-provenance/schema.json"
+  },
+  "sourceSchema": "https://maytetoscano.github.io/Bioclima_OGC/_sources/provenance/indicator-provenance/schema.yaml",
+  "resolvedSchemaProperties": "https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/provenance/indicator-provenance/resolvedProperties.json",
+  "sourceFiles": "https://maytetoscano.github.io/Bioclima_OGC/_sources/provenance/indicator-provenance/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/MayteToscano/Bioclima_OGC/blob/main/build-local/tests/bioclima/provenance/indicator-provenance/",
+  "description": "# Indicator Provenance\n\nPROV-O record for a computed indicator. Captures the input EBV bblocks, the implementation script URL, its git commit hash, the GitHub Actions run id and the numerical parameters used. Generated automatically by `recompute-indicators.yml`.\n",
+  "examples": [
+    {
+      "title": "PCI provenance",
+      "content": "Provenance record for the PCI computation.",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://maytetoscano.github.io/Bioclima_OGC/_sources/provenance/indicator-provenance/examples/pci-provenance.jsonld",
+          "code": "{\n  \"@context\": {\n    \"@vocab\": \"http://www.w3.org/ns/prov#\"\n  },\n  \"entity\": \"ogc.bioclima.indicator.pci/examples/pci-finland-2001-2018.covjson\",\n  \"wasDerivedFrom\": [\n    \"ogc.bioclima.ebv.vap-coniferous\",\n    \"ogc.bioclima.ebv.vap-deciduous\"\n  ],\n  \"wasGeneratedBy\": {\n    \"activity\": \"Compute PCI from VAP-DOY cubes\",\n    \"script\": \"https://maytetoscano.github.io/Bioclima_OGC/_sources/indicator/pci/code/compute.py\",\n    \"scriptVersion\": \"095f7bf20f0abcf8dffe01ccba94bbd0ebb24ec9\",\n    \"startedAtTime\": \"2024-11-01T12:00:00Z\",\n    \"endedAtTime\": \"2026-05-15T13:32:09Z\",\n    \"parameters\": {\n      \"coniferous_weight\": 0.4,\n      \"deciduous_weight\": 0.6,\n      \"trend_method\": \"ordinary-least-squares\",\n      \"min_valid_years\": 8\n    },\n    \"runId\": \"25920570793\"\n  },\n  \"wasAttributedTo\": {\n    \"agent\": \"github://maytetoscano/Bioclima_OGC/.github/workflows/recompute-indicators.yml\",\n    \"role\": \"Software agent\"\n  }\n}",
+          "url": "https://maytetoscano.github.io/Bioclima_OGC/build-local/tests/bioclima/provenance/indicator-provenance/example_1_1.json"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$id: https://maytetoscano.github.io/Bioclima_OGC/bblock/ogc.bioclima.provenance.indicator-provenance/schema.yaml\ntitle: Indicator Provenance\nallOf:\n- $ref: https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/provenance/ebv-provenance/schema.yaml\n- type: object\n  properties:\n    wasGeneratedBy:\n      type: object\n      required:\n      - script\n      - scriptVersion\n      properties:\n        script:\n          type: string\n          format: iri\n        scriptVersion:\n          type: string\n        runId:\n          type: string\n        parameters:\n          type: object\n",
+  "gitRepository": "https://github.com/MayteToscano/Bioclima_OGC",
+  "gitPath": "_sources/provenance/indicator-provenance"
+}

@@ -1,0 +1,53 @@
+
+
+{
+  "itemIdentifier": "ogc.bioclima.policy.kmgbf-target",
+  "name": "Kunming-Montreal GBF Target",
+  "abstract": "Schema for a single target of the Kunming-Montreal Global Biodiversity Framework: target number, multilingual label and definition, deadline, key indicators.",
+  "status": "under-development",
+  "dateTimeAddition": "2024-11-01T00:00:00Z",
+  "itemClass": "schema",
+  "register": "bioclima",
+  "version": "0.1.0",
+  "dependsOn": [],
+  "maintainers": [
+    {
+      "name": "BioClima Project",
+      "email": "maite.toscano@upm.es"
+    }
+  ],
+  "tags": [
+    "bioclima",
+    "policy",
+    "kmgbf-target"
+  ],
+  "shaclShapes": {},
+  "dateOfLastChange": "2024-11-01",
+  "schema": {
+    "application/yaml": "https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/policy/kmgbf-target/schema.yaml",
+    "application/json": "https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/policy/kmgbf-target/schema.json"
+  },
+  "sourceSchema": "https://maytetoscano.github.io/Bioclima_OGC/_sources/policy/kmgbf-target/schema.yaml",
+  "resolvedSchemaProperties": "https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/policy/kmgbf-target/resolvedProperties.json",
+  "sourceFiles": "https://maytetoscano.github.io/Bioclima_OGC/_sources/policy/kmgbf-target/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/MayteToscano/Bioclima_OGC/blob/main/build-local/tests/bioclima/policy/kmgbf-target/",
+  "description": "# Kunming-Montreal GBF Target\n\nSchema for one of the 23 targets of the Kunming-Montreal Global Biodiversity Framework. Each target carries a multilingual label, definition, deadline and the list of indicators that report against it.\n",
+  "examples": [
+    {
+      "title": "KMGBF Target 8 - Climate change adaptation",
+      "content": "A concrete target record.",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://maytetoscano.github.io/Bioclima_OGC/_sources/policy/kmgbf-target/examples/target-8.jsonld",
+          "code": "{\n  \"id\": \"https://maytetoscano.github.io/Bioclima_OGC/ontology/policy/kmgbf-target-8\",\n  \"targetNumber\": 8,\n  \"label\": {\n    \"en\": \"Climate change adaptation\",\n    \"es\": \"Adaptaci\u00f3n al cambio clim\u00e1tico\",\n    \"zh\": \"\u6c14\u5019\u53d8\u5316\u9002\u5e94\",\n    \"ro\": \"Adaptare la schimb\u0103rile climatice\"\n  },\n  \"definition\": {\n    \"en\": \"Minimize the impact of climate change on biodiversity through mitigation, adaptation and disaster risk reduction actions, including through nature-based solutions and/or ecosystem-based approaches.\",\n    \"es\": \"Minimizar el impacto del cambio clim\u00e1tico sobre la biodiversidad mediante acciones de mitigaci\u00f3n, adaptaci\u00f3n y reducci\u00f3n del riesgo de desastres, incluso mediante soluciones basadas en la naturaleza y/o enfoques basados en los ecosistemas.\",\n    \"zh\": \"\u901a\u8fc7\u51cf\u7f13\u3001\u9002\u5e94\u548c\u51cf\u5c11\u707e\u5bb3\u98ce\u9669\u7684\u884c\u52a8,\u5305\u62ec\u57fa\u4e8e\u81ea\u7136\u7684\u89e3\u51b3\u65b9\u6848\u548c/\u6216\u57fa\u4e8e\u751f\u6001\u7cfb\u7edf\u7684\u65b9\u6cd5,\u5c3d\u91cf\u51cf\u5c11\u6c14\u5019\u53d8\u5316\u5bf9\u751f\u7269\u591a\u6837\u6027\u7684\u5f71\u54cd\u3002\",\n    \"ro\": \"Minimizarea impactului schimb\u0103rilor climatice asupra biodiversit\u0103\u021bii prin ac\u021biuni de atenuare, adaptare \u0219i reducere a riscului de dezastre, inclusiv prin solu\u021bii bazate pe natur\u0103 \u0219i/sau abord\u0103ri bazate pe ecosisteme.\"\n  },\n  \"deadline\": \"2030-12-31\",\n  \"keyIndicators\": [\n    \"https://maytetoscano.github.io/Bioclima_OGC/ontology/indicator/pci\"\n  ],\n  \"source\": \"https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf\"\n}",
+          "url": "https://maytetoscano.github.io/Bioclima_OGC/build-local/tests/bioclima/policy/kmgbf-target/example_1_1.json"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$id: https://maytetoscano.github.io/Bioclima_OGC/bblock/ogc.bioclima.policy.kmgbf-target/schema.yaml\ntitle: KMGBF Target\ntype: object\nrequired:\n- id\n- targetNumber\n- label\n- definition\nproperties:\n  id:\n    type: string\n    format: iri\n  targetNumber:\n    type: integer\n    minimum: 1\n    maximum: 23\n  label:\n    type: object\n    required:\n    - en\n  definition:\n    type: object\n    required:\n    - en\n  deadline:\n    type: string\n    format: date\n  keyIndicators:\n    type: array\n    items:\n      type: string\n      format: iri\n  source:\n    type: string\n    format: iri\n",
+  "gitRepository": "https://github.com/MayteToscano/Bioclima_OGC",
+  "gitPath": "_sources/policy/kmgbf-target"
+}

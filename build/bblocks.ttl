@@ -8,9 +8,396 @@
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
 @prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<bblocks://ogc.bioclima.indicator.bioclimatic-zone> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Bioclimatic zonification from PCI" ;
+    dct:abstract "Classifies the continuous PCI raster into four categorical zones (stable, mild advance, strong advance, delay) using published thresholds and emits a GeoJSON FeatureCollection enriched with category IRIs and policy references."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2024-11-01T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/bblock/ogc.bioclima.indicator.bioclimatic-zone> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/build/generateddocs/json-full/bioclima/indicator/bioclimatic-zone/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/build/generateddocs/markdown/bioclima/indicator/bioclimatic-zone/index.md> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2024-11-01"^^xsd:date ;
+    skos:inScheme <https://maytetoscano.github.io/Bioclima_OGC/> ;
+    skos:prefLabel "Bioclimatic zonification from PCI" ;
+    skos:topConceptOf <https://maytetoscano.github.io/Bioclima_OGC/> ;
+    dcat:keyword "bioclima",
+        "bioclimatic-zone",
+        "indicator" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/indicator/bioclimatic-zone/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/indicator/bioclimatic-zone/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.bioclima.indicator.pci> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://ogc.bioclima.policy.policy-alignment> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Indicator to Policy Alignment" ;
+    dct:abstract "Describes how a BioClima indicator aligns with KMGBF targets or SDGs: relationship type (informs, measures-progress-on, triggers-action-for, supports-reporting-on), evidence strength and multilingual justification."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2024-11-01T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/bblock/ogc.bioclima.policy.policy-alignment> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/build/generateddocs/json-full/bioclima/policy/policy-alignment/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/build/generateddocs/markdown/bioclima/policy/policy-alignment/index.md> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2024-11-01"^^xsd:date ;
+    skos:inScheme <https://maytetoscano.github.io/Bioclima_OGC/> ;
+    skos:prefLabel "Indicator to Policy Alignment" ;
+    skos:topConceptOf <https://maytetoscano.github.io/Bioclima_OGC/> ;
+    dcat:keyword "bioclima",
+        "policy",
+        "policy-alignment" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/policy/policy-alignment/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/policy/policy-alignment/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.bioclima.indicator.indicator-definition>,
+        <bblocks://ogc.bioclima.policy.kmgbf-target> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://ogc.bioclima.provenance.indicator-provenance> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Indicator Provenance (W3C PROV)" ;
+    dct:abstract "PROV-O record for a computed indicator: references EBV inputs, the Python implementation by URL, the git commit hash and the GitHub Actions run id."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2024-11-01T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/build/generateddocs/markdown/bioclima/provenance/indicator-provenance/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/bblock/ogc.bioclima.provenance.indicator-provenance> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/build/generateddocs/json-full/bioclima/provenance/indicator-provenance/index.json> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2024-11-01"^^xsd:date ;
+    skos:inScheme <https://maytetoscano.github.io/Bioclima_OGC/> ;
+    skos:prefLabel "Indicator Provenance (W3C PROV)" ;
+    skos:topConceptOf <https://maytetoscano.github.io/Bioclima_OGC/> ;
+    dcat:keyword "bioclima",
+        "indicator-provenance",
+        "provenance" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/provenance/indicator-provenance/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/provenance/indicator-provenance/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.bioclima.provenance.ebv-provenance> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<https://covjson.org/spec/> rdfs:label "CoverageJSON 1.0 specification" .
+
+<https://docs.ogc.org/cs/21-069r2/21-069r2.html> rdfs:label "OGC 21-069r2 CoverageJSON Community Standard" .
+
+<https://maytetoscano.github.io/Bioclima_OGC/build/bblocks.ttl> a prov:Entity ;
+    dct:format "text/turtle" ;
+    prov:wasAttributedTo _:N89b4003ba3da4189963358b234ae3494 ;
+    prov:wasGeneratedBy [ a prov:Activity ;
+            prov:endedAtTime "2026-05-15T13:42:11.474461"^^xsd:dateTime ;
+            prov:startedAtTime "2026-05-15T13:42:11.292653"^^xsd:dateTime ;
+            prov:used [ a prov:Entity ;
+                    dct:format "application/json" ;
+                    dct:hasVersion "git:0484b58d6889b86f075ea69f669fa5ea3949b184" ;
+                    rdfs:seeAlso <https://maytetoscano.github.io/Bioclima_OGC/build/register.json> ],
+                [ a prov:Entity ;
+                    dct:format "application/yaml" ;
+                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
+            prov:wasAssociatedWith _:N89b4003ba3da4189963358b234ae3494 ] .
+
+<bblocks://ogc.bioclima.ebv.vap-coniferous> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "VAP Coniferous Finland 2001-2018" ;
+    dct:abstract "Concrete EBV dataset: yearly maps of the start of the Vegetation Active Period in coniferous forests of Finland, 2001-2018, derived from MODIS Fractional Snow Cover. The CoverageJSON file is stored in this block's examples/ directory."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2024-11-01T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/build/generateddocs/json-full/bioclima/ebv/vap-coniferous/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/bblock/ogc.bioclima.ebv.vap-coniferous> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/build/generateddocs/markdown/bioclima/ebv/vap-coniferous/index.md> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2024-11-01"^^xsd:date ;
+    skos:inScheme <https://maytetoscano.github.io/Bioclima_OGC/> ;
+    skos:prefLabel "VAP Coniferous Finland 2001-2018" ;
+    skos:topConceptOf <https://maytetoscano.github.io/Bioclima_OGC/> ;
+    dcat:keyword "bioclima",
+        "ebv",
+        "vap-coniferous" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/ebv/vap-coniferous/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/ebv/vap-coniferous/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.bioclima.coveragejson.bioclima-coverage>,
+        <bblocks://ogc.bioclima.ebv.ebv-definition> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
+
+<bblocks://ogc.bioclima.ebv.vap-deciduous> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "VAP Deciduous Finland 2001-2018" ;
+    dct:abstract "Concrete EBV dataset: yearly maps of the start of the Vegetation Active Period in deciduous vegetation of Finland, 2001-2018, derived from MODIS NDWI. The CoverageJSON file is stored in this block's examples/ directory."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2024-11-01T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/bblock/ogc.bioclima.ebv.vap-deciduous> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/build/generateddocs/markdown/bioclima/ebv/vap-deciduous/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/build/generateddocs/json-full/bioclima/ebv/vap-deciduous/index.json> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2024-11-01"^^xsd:date ;
+    skos:inScheme <https://maytetoscano.github.io/Bioclima_OGC/> ;
+    skos:prefLabel "VAP Deciduous Finland 2001-2018" ;
+    skos:topConceptOf <https://maytetoscano.github.io/Bioclima_OGC/> ;
+    dcat:keyword "bioclima",
+        "ebv",
+        "vap-deciduous" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/ebv/vap-deciduous/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/ebv/vap-deciduous/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.bioclima.coveragejson.bioclima-coverage>,
+        <bblocks://ogc.bioclima.ebv.ebv-definition> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
+
+<bblocks://ogc.bioclima.indicator.pci> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Phenological Change Indicator (PCI)" ;
+    dct:abstract "Rate of change of vegetation active period onset, computed as the weighted mean of per-pixel linear trends for coniferous and deciduous forests over the analysis window. Includes the Python implementation in code/compute.py and an example output for Finland 2001-2018."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2024-11-01T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/bblock/ogc.bioclima.indicator.pci> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/build/generateddocs/markdown/bioclima/indicator/pci/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/build/generateddocs/json-full/bioclima/indicator/pci/index.json> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2024-11-01"^^xsd:date ;
+    skos:inScheme <https://maytetoscano.github.io/Bioclima_OGC/> ;
+    skos:prefLabel "Phenological Change Indicator (PCI)" ;
+    skos:topConceptOf <https://maytetoscano.github.io/Bioclima_OGC/> ;
+    dcat:keyword "bioclima",
+        "indicator",
+        "pci" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/indicator/pci/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/indicator/pci/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.bioclima.coveragejson.bioclima-coverage>,
+        <bblocks://ogc.bioclima.ebv.vap-coniferous>,
+        <bblocks://ogc.bioclima.ebv.vap-deciduous>,
+        <bblocks://ogc.bioclima.indicator.indicator-definition> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
+
+<bblocks://ogc.bioclima.policy.kmgbf-target> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Kunming-Montreal GBF Target" ;
+    dct:abstract "Schema for a single target of the Kunming-Montreal Global Biodiversity Framework: target number, multilingual label and definition, deadline, key indicators."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2024-11-01T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/build/generateddocs/json-full/bioclima/policy/kmgbf-target/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/bblock/ogc.bioclima.policy.kmgbf-target> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/build/generateddocs/markdown/bioclima/policy/kmgbf-target/index.md> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2024-11-01"^^xsd:date ;
+    skos:inScheme <https://maytetoscano.github.io/Bioclima_OGC/> ;
+    skos:prefLabel "Kunming-Montreal GBF Target" ;
+    skos:topConceptOf <https://maytetoscano.github.io/Bioclima_OGC/> ;
+    dcat:keyword "bioclima",
+        "kmgbf-target",
+        "policy" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/policy/kmgbf-target/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/policy/kmgbf-target/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://ogc.bioclima.provenance.ebv-provenance> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "EBV Provenance (W3C PROV)" ;
+    dct:abstract "PROV-O encoded lineage for an EBV dataset: raw inputs, processing activity, agent, methodology citation."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2024-11-01T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/build/generateddocs/json-full/bioclima/provenance/ebv-provenance/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/bblock/ogc.bioclima.provenance.ebv-provenance> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/build/generateddocs/markdown/bioclima/provenance/ebv-provenance/index.md> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2024-11-01"^^xsd:date ;
+    skos:inScheme <https://maytetoscano.github.io/Bioclima_OGC/> ;
+    skos:prefLabel "EBV Provenance (W3C PROV)" ;
+    skos:topConceptOf <https://maytetoscano.github.io/Bioclima_OGC/> ;
+    dcat:keyword "bioclima",
+        "ebv-provenance",
+        "provenance" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/provenance/ebv-provenance/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/provenance/ebv-provenance/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://ogc.bioclima.ebv.ebv-definition> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "EBV Definition (generic)" ;
+    dct:abstract "Generic schema describing an Essential Biodiversity Variable dataset following the GeoBON inventory model. Concrete EBVs (such as vap-coniferous) inherit this template and provide their actual CoverageJSON file inside their own examples/ folder."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2024-11-01T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/build/generateddocs/json-full/bioclima/ebv/ebv-definition/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/bblock/ogc.bioclima.ebv.ebv-definition> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/build/generateddocs/markdown/bioclima/ebv/ebv-definition/index.md> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2024-11-01"^^xsd:date ;
+    skos:inScheme <https://maytetoscano.github.io/Bioclima_OGC/> ;
+    skos:prefLabel "EBV Definition (generic)" ;
+    skos:topConceptOf <https://maytetoscano.github.io/Bioclima_OGC/> ;
+    dcat:keyword "bioclima",
+        "ebv",
+        "ebv-definition" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/ebv/ebv-definition/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/ebv/ebv-definition/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://ogc.bioclima.indicator.indicator-definition> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Indicator Definition (generic)" ;
+    dct:abstract "Generic recipe-style schema for a biodiversity indicator: declares inputs (which EBVs), parameters, output unit, implementation entry point, and policy alignment."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2024-11-01T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/build/generateddocs/markdown/bioclima/indicator/indicator-definition/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/bblock/ogc.bioclima.indicator.indicator-definition> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/build/generateddocs/json-full/bioclima/indicator/indicator-definition/index.json> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2024-11-01"^^xsd:date ;
+    skos:inScheme <https://maytetoscano.github.io/Bioclima_OGC/> ;
+    skos:prefLabel "Indicator Definition (generic)" ;
+    skos:topConceptOf <https://maytetoscano.github.io/Bioclima_OGC/> ;
+    dcat:keyword "bioclima",
+        "indicator",
+        "indicator-definition" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/indicator/indicator-definition/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/indicator/indicator-definition/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://ogc.bioclima.coveragejson.bioclima-coverage> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "BioClima CoverageJSON profile" ;
+    dct:abstract "Profile of the OGC CoverageJSON community standard for BioClima EBV and indicator datasets. Requires EPSG:4326 for spatial axes, allows an optional temporal axis with ISO 8601 values, and requires every parameter to declare an observedProperty.id resolvable in the BioClima ontology with labels in English, Spanish, Chinese and Romanian."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2024-11-01T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/build/generateddocs/markdown/bioclima/coveragejson/bioclima-coverage/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/build/generateddocs/json-full/bioclima/coveragejson/bioclima-coverage/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/Bioclima_OGC/bblock/ogc.bioclima.coveragejson.bioclima-coverage> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2024-11-01"^^xsd:date ;
+    dct:source <https://covjson.org/spec/>,
+        <https://docs.ogc.org/cs/21-069r2/21-069r2.html> ;
+    skos:inScheme <https://maytetoscano.github.io/Bioclima_OGC/> ;
+    skos:prefLabel "BioClima CoverageJSON profile" ;
+    skos:topConceptOf <https://maytetoscano.github.io/Bioclima_OGC/> ;
+    dcat:keyword "coveragejson",
+        "ogc",
+        "profile",
+        "schema" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/coveragejson/bioclima-coverage/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/coveragejson/bioclima-coverage/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
 
 <https://maytetoscano.github.io/Bioclima_OGC/> a skos:ConceptScheme,
         dcat:Catalog,
@@ -37,40 +424,36 @@ A multilingual SKOS ontology (English, Spanish, Chinese, Romanian) lives
 outside the register at /ontology and is referenced from every block by
 IRI.
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:modified "2026-05-15T13:31:00.433353"^^xsd:dateTime ;
+    dct:modified "2026-05-15T13:41:55.246555"^^xsd:dateTime ;
     owl:imports <https://opengeospatial.github.io/bblocks/register.json> ;
+    skos:hasTopConcept <bblocks://ogc.bioclima.coveragejson.bioclima-coverage>,
+        <bblocks://ogc.bioclima.ebv.ebv-definition>,
+        <bblocks://ogc.bioclima.ebv.vap-coniferous>,
+        <bblocks://ogc.bioclima.ebv.vap-deciduous>,
+        <bblocks://ogc.bioclima.indicator.bioclimatic-zone>,
+        <bblocks://ogc.bioclima.indicator.indicator-definition>,
+        <bblocks://ogc.bioclima.indicator.pci>,
+        <bblocks://ogc.bioclima.policy.kmgbf-target>,
+        <bblocks://ogc.bioclima.policy.policy-alignment>,
+        <bblocks://ogc.bioclima.provenance.ebv-provenance>,
+        <bblocks://ogc.bioclima.provenance.indicator-provenance> ;
     skos:prefLabel "Building Blocks - BioClima OGC Building Blocks" ;
-    prof:hasResource [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
-            dct:type "text/turtle" ;
+    prof:hasResource [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
+            dct:type "application/ld+json" ;
             ns2:relation <http://www.iana.org/assignments/relation/self> ;
-            ns1:hasTarget <https://maytetoscano.github.io/Bioclima_OGC/build/bblocks.ttl> ],
+            ns1:hasTarget <https://maytetoscano.github.io/Bioclima_OGC/build/bblocks.jsonld> ],
         [ rdfs:label "This Building Blocks Register in JSON format" ;
             dct:type "application/json" ;
             ns2:relation <http://www.iana.org/assignments/relation/self> ;
             ns1:hasTarget <https://maytetoscano.github.io/Bioclima_OGC/build/register.json> ],
-        [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
-            dct:type "application/ld+json" ;
+        [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
+            dct:type "text/turtle" ;
             ns2:relation <http://www.iana.org/assignments/relation/self> ;
-            ns1:hasTarget <https://maytetoscano.github.io/Bioclima_OGC/build/bblocks.jsonld> ] ;
+            ns1:hasTarget <https://maytetoscano.github.io/Bioclima_OGC/build/bblocks.ttl> ] ;
     foaf:homepage <https://maytetoscano.github.io/Bioclima_OGC/> ;
-    bblocks:hasValidationReport <https://maytetoscano.github.io/Bioclima_OGC/build/tests/report.html> .
+    bblocks:hasValidationReport <https://maytetoscano.github.io/Bioclima_OGC/build-local/tests/report.html> .
 
-<https://maytetoscano.github.io/Bioclima_OGC/build/bblocks.ttl> a prov:Entity ;
-    dct:format "text/turtle" ;
-    prov:wasAttributedTo _:N0076c939718b46dfaa2a0e7d7df01ba3 ;
-    prov:wasGeneratedBy [ a prov:Activity ;
-            prov:endedAtTime "2026-05-15T13:31:00.652157"^^xsd:dateTime ;
-            prov:startedAtTime "2026-05-15T13:31:00.527820"^^xsd:dateTime ;
-            prov:used [ a prov:Entity ;
-                    dct:format "application/json" ;
-                    dct:hasVersion "git:606a07557084937eab9e5533232a9681c918ecbf" ;
-                    rdfs:seeAlso <https://maytetoscano.github.io/Bioclima_OGC/build/register.json> ],
-                [ a prov:Entity ;
-                    dct:format "application/yaml" ;
-                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
-            prov:wasAssociatedWith _:N0076c939718b46dfaa2a0e7d7df01ba3 ] .
-
-_:N0076c939718b46dfaa2a0e7d7df01ba3 a prov:Agent,
+_:N89b4003ba3da4189963358b234ae3494 a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
     dct:hasVersion "0.5.28" ;

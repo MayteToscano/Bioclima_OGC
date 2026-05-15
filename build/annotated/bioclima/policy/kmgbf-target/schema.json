@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maytetoscano.github.io/Bioclima_OGC/bblock/ogc.bioclima.policy.kmgbf-target/schema.yaml",
+  "title": "KMGBF Target",
+  "type": "object",
+  "required": [
+    "id",
+    "targetNumber",
+    "label",
+    "definition"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "targetNumber": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 23
+    },
+    "label": {
+      "type": "object",
+      "required": [
+        "en"
+      ]
+    },
+    "definition": {
+      "type": "object",
+      "required": [
+        "en"
+      ]
+    },
+    "deadline": {
+      "type": "string",
+      "format": "date"
+    },
+    "keyIndicators": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "iri"
+      }
+    },
+    "source": {
+      "type": "string",
+      "format": "iri"
+    }
+  }
+}

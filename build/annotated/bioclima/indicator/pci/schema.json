@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maytetoscano.github.io/Bioclima_OGC/bblock/ogc.bioclima.indicator.pci/schema.yaml",
+  "title": "PCI recipe",
+  "allOf": [
+    {
+      "$ref": "https://maytetoscano.github.io/Bioclima_OGC/build/annotated/bioclima/indicator/indicator-definition/schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "output": {
+          "type": "object",
+          "properties": {
+            "unit": {
+              "const": "https://maytetoscano.github.io/Bioclima_OGC/ontology/units/days-per-year"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
