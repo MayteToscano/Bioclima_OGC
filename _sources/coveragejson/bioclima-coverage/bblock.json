@@ -7,8 +7,7 @@
   "register": "bioclima",
   "version": "0.1.0",
   "dependsOn": [
-    "ogc.bioclima.ontology.ebv-vocabulary",
-    "ogc.bioclima.ontology.units-and-measures"
+    "ogc.bioclima.ontology.ebv-vocabulary"
   ],
   "sources": [
     {
