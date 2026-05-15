@@ -3,7 +3,7 @@
   "name": "Bioclimatic zonification from PCI",
   "abstract": "Classifies the continuous PCI raster into categorical bioclimatic zones (stable, mild advance, strong advance, delay) using published thresholds, then vectorises contiguous cells of the same class into a GeoJSON FeatureCollection. Each feature is enriched with statistics, the SKOS concept IRI for its category, and the KMGBF targets it informs.",
   "status": "under-development",
-  "itemClass": "schema",
+  "itemClass": "indicator",
   "register": "bioclima",
   "version": "0.1.0",
   "dependsOn": [

@@ -1,0 +1,19 @@
+{
+  "itemIdentifier": "ogc.bioclima.ebv.vegetation-phenology",
+  "name": "Vegetation Phenology (EBV category)",
+  "abstract": "Convenience category block grouping all EBV datasets concerning vegetation phenology (start of season, end of season, length of growing season). Acts as a thematic index over individual datasets such as vap-coniferous and vap-deciduous.",
+  "status": "under-development",
+  "itemClass": "schema",
+  "register": "bioclima",
+  "version": "0.1.0",
+  "dependsOn": [
+    "ogc.bioclima.ebv.ebv-definition",
+    "ogc.bioclima.ontology.ebv-vocabulary"
+  ],
+  "tags": [
+    "ebv",
+    "phenology",
+    "category"
+  ],
+  "dateTimeAddition": "2024-11-01T00:00:00Z"
+}

@@ -1,0 +1,30 @@
+{
+  "itemIdentifier": "ogc.bioclima.coveragejson.bioclima-coverage",
+  "name": "BioClima CoverageJSON profile",
+  "abstract": "Profile of the OGC CoverageJSON standard adopted by BioClima. Constrains the standard schema to require an EPSG:4326 spatial CRS, a multi-temporal axis when present, and ensures every parameter's observedProperty.id resolves to a SKOS concept inside the BioClima ontology. Used by every EBV and indicator dataset in the register.",
+  "status": "under-development",
+  "itemClass": "schema",
+  "register": "bioclima",
+  "version": "0.1.0",
+  "dependsOn": [
+    "ogc.bioclima.ontology.ebv-vocabulary",
+    "ogc.bioclima.ontology.units-and-measures"
+  ],
+  "sources": [
+    {
+      "title": "CoverageJSON 1.0",
+      "link": "https://covjson.org/spec/"
+    },
+    {
+      "title": "OGC 21-069r2 CoverageJSON Community Standard",
+      "link": "https://docs.ogc.org/cs/21-069r2/21-069r2.html"
+    }
+  ],
+  "tags": [
+    "coveragejson",
+    "ogc",
+    "profile",
+    "schema"
+  ],
+  "dateTimeAddition": "2024-11-01T00:00:00Z"
+}

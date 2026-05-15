@@ -3,7 +3,7 @@
   "name": "BioClima EBV Vocabulary",
   "abstract": "SKOS vocabulary of Essential Biodiversity Variables used in BioClima. Concepts include EBV classes (Ecosystem functioning, Species populations, etc.), EBV names (Ecosystem phenology, Net primary productivity), and the specific observed properties such as 'Start of vegetation active period (vap_doy)'. Every concept carries prefLabel and definition in English, Spanish, Chinese and Romanian.",
   "status": "under-development",
-  "itemClass": "schema",
+  "itemClass": "ontology",
   "register": "bioclima",
   "version": "0.1.0",
   "dependsOn": [

@@ -3,7 +3,7 @@
   "name": "Start of Vegetation Active Period in coniferous forests of Finland (2001-2018)",
   "abstract": "Concrete EBV dataset: yearly maps of the start of the vegetation active period (VAP) in coniferous forests of Finland from 2001 to 2018, derived from MODIS Fractional Snow Cover. The CoverageJSON data file is stored in this bblock's examples/ directory. Inherits the generic EBV schema and the BioClima CoverageJSON profile.",
   "status": "stable",
-  "itemClass": "schema",
+  "itemClass": "dataset",
   "register": "bioclima",
   "version": "0.1.0",
   "dependsOn": [

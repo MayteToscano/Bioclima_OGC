@@ -1,0 +1,19 @@
+{
+  "itemIdentifier": "ogc.bioclima.indicator.indicator-definition",
+  "name": "Indicator Definition (generic)",
+  "abstract": "Generic schema for a biodiversity indicator. Each indicator declares its inputs (EBVs), its computation recipe (algorithm, parameters, language, entrypoint), its output unit and its policy alignment. Concrete indicators (e.g. PCI) inherit this template and add their own code and example output.",
+  "status": "under-development",
+  "itemClass": "schema",
+  "register": "bioclima",
+  "version": "0.1.0",
+  "dependsOn": [
+    "ogc.bioclima.ontology.indicator-vocabulary",
+    "ogc.bioclima.ontology.policy-vocabulary"
+  ],
+  "tags": [
+    "indicator",
+    "schema",
+    "biodiversity"
+  ],
+  "dateTimeAddition": "2024-11-01T00:00:00Z"
+}
