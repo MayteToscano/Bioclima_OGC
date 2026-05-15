@@ -191,7 +191,10 @@
       }
     }
   ],
-  "modified": "2026-05-15T13:30:19.207448",
+  "name": "Building Blocks - BioClima OGC Building Blocks",
+  "abstract": "Register of OGC Building Blocks for Essential Biodiversity Variables (EBVs),\nderived indicators, bioclimatic zonification, data provenance and policy\nalignment with the Kunming-Montreal GBF. The pilot dataset is the Start of\nVegetation Active Period in Finland (2001-2018).\n",
+  "description": "This register defines BioClima-specific building blocks on top of the\nOGC CoverageJSON community standard. It includes:\n\n- A profile of CoverageJSON for BioClima EBV datasets.\n- Generic schemas for EBV records and indicator records.\n- Concrete EBV datasets for Finnish coniferous and deciduous vegetation.\n- The Phenological Change Indicator (PCI) and its bioclimatic zonification,\n  each with a Python implementation that the CI can re-run automatically.\n- W3C PROV-O provenance schemas for both EBVs and indicators.\n- Policy alignment schemas linking indicators to Kunming-Montreal GBF\n  targets and SDG 15.\n\nA multilingual SKOS ontology (English, Spanish, Chinese, Romanian) lives\noutside the register at /ontology and is referenced from every block by\nIRI.\n",
+  "modified": "2026-05-15T13:31:00.433353",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"6b01f188cc614cc2e65f4bf86a2623f98f101dfd",
@@ -201,7 +204,6 @@
   },
   "gitRepository": "https://github.com/MayteToscano/Bioclima_OGC",
   "gitHubRepository": "https://github.com/MayteToscano/Bioclima_OGC/blob/main/",
-  "name": "Building Blocks - workspace",
   "baseURL": "https://maytetoscano.github.io/Bioclima_OGC/",
   "viewerURL": "https://maytetoscano.github.io/Bioclima_OGC/",
   "validationReport": "https://maytetoscano.github.io/Bioclima_OGC/build/tests/report.html",
@@ -235,7 +237,7 @@
     "dcat:Catalog",
     "bblocks:BBlocksRegister"
   ],
-  "skos:prefLabel": "Building Blocks - workspace",
+  "skos:prefLabel": "Building Blocks - BioClima OGC Building Blocks",
   "hasConcepts": [],
   "skos:hasTopConcept": []
 }

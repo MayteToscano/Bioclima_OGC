@@ -2,8 +2,8 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix ns1: <http://www.iana.org/assignments/> .
-@prefix ns2: <http://www.w3.org/ns/oa#> .
+@prefix ns1: <http://www.w3.org/ns/oa#> .
+@prefix ns2: <http://www.iana.org/assignments/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -15,41 +15,62 @@
 <https://maytetoscano.github.io/Bioclima_OGC/> a skos:ConceptScheme,
         dcat:Catalog,
         bblocks:BBlocksRegister ;
-    rdfs:label "Building Blocks - workspace" ;
-    dct:modified "2026-05-15T13:30:19.207448"^^xsd:dateTime ;
+    rdfs:label "Building Blocks - BioClima OGC Building Blocks" ;
+    dct:abstract """Register of OGC Building Blocks for Essential Biodiversity Variables (EBVs),
+derived indicators, bioclimatic zonification, data provenance and policy
+alignment with the Kunming-Montreal GBF. The pilot dataset is the Start of
+Vegetation Active Period in Finland (2001-2018).
+"""^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:description """This register defines BioClima-specific building blocks on top of the
+OGC CoverageJSON community standard. It includes:
+
+- A profile of CoverageJSON for BioClima EBV datasets.
+- Generic schemas for EBV records and indicator records.
+- Concrete EBV datasets for Finnish coniferous and deciduous vegetation.
+- The Phenological Change Indicator (PCI) and its bioclimatic zonification,
+  each with a Python implementation that the CI can re-run automatically.
+- W3C PROV-O provenance schemas for both EBVs and indicators.
+- Policy alignment schemas linking indicators to Kunming-Montreal GBF
+  targets and SDG 15.
+
+A multilingual SKOS ontology (English, Spanish, Chinese, Romanian) lives
+outside the register at /ontology and is referenced from every block by
+IRI.
+"""^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:modified "2026-05-15T13:31:00.433353"^^xsd:dateTime ;
     owl:imports <https://opengeospatial.github.io/bblocks/register.json> ;
-    skos:prefLabel "Building Blocks - workspace" ;
+    skos:prefLabel "Building Blocks - BioClima OGC Building Blocks" ;
     prof:hasResource [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
             dct:type "text/turtle" ;
-            ns1:relation <http://www.iana.org/assignments/relation/self> ;
-            ns2:hasTarget <https://maytetoscano.github.io/Bioclima_OGC/build/bblocks.ttl> ],
-        [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
-            dct:type "application/ld+json" ;
-            ns1:relation <http://www.iana.org/assignments/relation/self> ;
-            ns2:hasTarget <https://maytetoscano.github.io/Bioclima_OGC/build/bblocks.jsonld> ],
+            ns2:relation <http://www.iana.org/assignments/relation/self> ;
+            ns1:hasTarget <https://maytetoscano.github.io/Bioclima_OGC/build/bblocks.ttl> ],
         [ rdfs:label "This Building Blocks Register in JSON format" ;
             dct:type "application/json" ;
-            ns1:relation <http://www.iana.org/assignments/relation/self> ;
-            ns2:hasTarget <https://maytetoscano.github.io/Bioclima_OGC/build/register.json> ] ;
+            ns2:relation <http://www.iana.org/assignments/relation/self> ;
+            ns1:hasTarget <https://maytetoscano.github.io/Bioclima_OGC/build/register.json> ],
+        [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
+            dct:type "application/ld+json" ;
+            ns2:relation <http://www.iana.org/assignments/relation/self> ;
+            ns1:hasTarget <https://maytetoscano.github.io/Bioclima_OGC/build/bblocks.jsonld> ] ;
     foaf:homepage <https://maytetoscano.github.io/Bioclima_OGC/> ;
     bblocks:hasValidationReport <https://maytetoscano.github.io/Bioclima_OGC/build/tests/report.html> .
 
 <https://maytetoscano.github.io/Bioclima_OGC/build/bblocks.ttl> a prov:Entity ;
     dct:format "text/turtle" ;
-    prov:wasAttributedTo _:Nc54a026313e249c399f42626e17fa808 ;
+    prov:wasAttributedTo _:N0076c939718b46dfaa2a0e7d7df01ba3 ;
     prov:wasGeneratedBy [ a prov:Activity ;
-            prov:endedAtTime "2026-05-15T13:30:19.467560"^^xsd:dateTime ;
-            prov:startedAtTime "2026-05-15T13:30:19.314627"^^xsd:dateTime ;
+            prov:endedAtTime "2026-05-15T13:31:00.652157"^^xsd:dateTime ;
+            prov:startedAtTime "2026-05-15T13:31:00.527820"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
                     dct:format "application/json" ;
-                    dct:hasVersion "git:6829c084fe723f36a4f81843b6db75e26119d55f" ;
+                    dct:hasVersion "git:606a07557084937eab9e5533232a9681c918ecbf" ;
                     rdfs:seeAlso <https://maytetoscano.github.io/Bioclima_OGC/build/register.json> ],
                 [ a prov:Entity ;
                     dct:format "application/yaml" ;
                     rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
-            prov:wasAssociatedWith _:Nc54a026313e249c399f42626e17fa808 ] .
+            prov:wasAssociatedWith _:N0076c939718b46dfaa2a0e7d7df01ba3 ] .
 
-_:Nc54a026313e249c399f42626e17fa808 a prov:Agent,
+_:N0076c939718b46dfaa2a0e7d7df01ba3 a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
     dct:hasVersion "0.5.28" ;
