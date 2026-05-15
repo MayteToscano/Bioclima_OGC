@@ -6,7 +6,6 @@
   "itemClass": "schema",
   "register": "bioclima",
   "version": "0.1.0",
-  "shortName": "indicator-provenance",
   "dependsOn": [
     "ogc.bioclima.provenance.ebv-provenance"
   ],

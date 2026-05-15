@@ -6,7 +6,6 @@
   "itemClass": "ontology",
   "register": "bioclima",
   "version": "0.1.0",
-  "shortName": "units-and-measures",
   "dependsOn": [
     "ogc.bioclima.ontology.core"
   ],

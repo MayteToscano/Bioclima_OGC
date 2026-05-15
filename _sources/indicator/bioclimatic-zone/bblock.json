@@ -6,7 +6,6 @@
   "itemClass": "indicator",
   "register": "bioclima",
   "version": "0.1.0",
-  "shortName": "bioclimatic-zone",
   "dependsOn": [
     "ogc.bioclima.indicator.pci",
     "ogc.bioclima.ontology.indicator-vocabulary",

@@ -6,7 +6,6 @@
   "itemClass": "schema",
   "register": "bioclima",
   "version": "0.1.0",
-  "shortName": "indicator-definition",
   "dependsOn": [
     "ogc.bioclima.ontology.indicator-vocabulary",
     "ogc.bioclima.ontology.policy-vocabulary"

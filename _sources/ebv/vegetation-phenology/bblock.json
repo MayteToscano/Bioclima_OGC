@@ -6,7 +6,6 @@
   "itemClass": "schema",
   "register": "bioclima",
   "version": "0.1.0",
-  "shortName": "vegetation-phenology",
   "dependsOn": [
     "ogc.bioclima.ebv.ebv-definition",
     "ogc.bioclima.ontology.ebv-vocabulary"

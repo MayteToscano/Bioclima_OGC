@@ -6,7 +6,6 @@
   "itemClass": "indicator",
   "register": "bioclima",
   "version": "0.1.0",
-  "shortName": "pci",
   "dependsOn": [
     "ogc.bioclima.indicator.indicator-definition",
     "ogc.bioclima.ebv.vap-coniferous",

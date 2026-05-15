@@ -6,7 +6,6 @@
   "itemClass": "dataset",
   "register": "bioclima",
   "version": "0.1.0",
-  "shortName": "vap-deciduous",
   "dependsOn": [
     "ogc.bioclima.ebv.ebv-definition",
     "ogc.bioclima.coveragejson.bioclima-coverage",

@@ -6,7 +6,6 @@
   "itemClass": "schema",
   "register": "bioclima",
   "version": "0.1.0",
-  "shortName": "ebv-definition",
   "dependsOn": [
     "ogc.bioclima.ontology.ebv-vocabulary",
     "ogc.bioclima.ontology.entity-types"
