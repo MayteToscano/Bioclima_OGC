@@ -21,7 +21,6 @@
       "link": "https://docs.ogc.org/cs/21-069r2/21-069r2.html"
     }
   ],
-  "schema": "https://maytetoscano.github.io/Bioclima_OGC/bblock/ogc.bioclima.coveragejson.bioclima-coverage/schema.yaml",
   "tags": [
     "coveragejson",
     "ogc",
