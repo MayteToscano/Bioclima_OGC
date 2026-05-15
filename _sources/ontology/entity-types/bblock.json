@@ -3,11 +3,17 @@
   "name": "BioClima Entity Types",
   "abstract": "SKOS vocabulary describing entity types observed by EBVs (ecosystems, species, communities), with sub-concepts for coniferous and deciduous forests as used in the Finland VAP datasets.",
   "status": "under-development",
-  "dateTimeAddedToRegister": "2024-11-01T00:00:00Z",
   "itemClass": "ontology",
   "register": "bioclima",
   "version": "0.1.0",
   "shortName": "entity-types",
-  "dependsOn": ["ogc.bioclima.ontology.core"],
-  "tags": ["ontology", "entity", "skos"]
+  "dependsOn": [
+    "ogc.bioclima.ontology.core"
+  ],
+  "tags": [
+    "ontology",
+    "entity",
+    "skos"
+  ],
+  "dateTimeAddition": "2024-11-01T00:00:00Z"
 }

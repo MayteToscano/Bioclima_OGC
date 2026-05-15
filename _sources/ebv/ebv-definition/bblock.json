@@ -3,7 +3,6 @@
   "name": "EBV Definition (generic)",
   "abstract": "Generic schema describing an Essential Biodiversity Variable dataset following the GeoBON inventory model (id, naming_authority, title, doi, ebv class/name/entity, geospatial coverage, time coverage, license, creator). Concrete EBV blocks (such as vap-coniferous) inherit this template and provide actual data inside their examples/ folder.",
   "status": "under-development",
-  "dateTimeAddedToRegister": "2024-11-01T00:00:00Z",
   "itemClass": "schema",
   "register": "bioclima",
   "version": "0.1.0",
@@ -22,5 +21,10 @@
       "link": "https://portal.geobon.org/ebv-conventions"
     }
   ],
-  "tags": ["ebv", "schema", "metadata"]
+  "tags": [
+    "ebv",
+    "schema",
+    "metadata"
+  ],
+  "dateTimeAddition": "2024-11-01T00:00:00Z"
 }

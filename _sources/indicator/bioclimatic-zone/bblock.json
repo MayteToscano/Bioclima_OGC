@@ -3,7 +3,6 @@
   "name": "Bioclimatic zonification from PCI",
   "abstract": "Classifies the continuous PCI raster into categorical bioclimatic zones (stable, mild advance, strong advance, delay) using published thresholds, then vectorises contiguous cells of the same class into a GeoJSON FeatureCollection. Each feature is enriched with statistics, the SKOS concept IRI for its category, and the KMGBF targets it informs.",
   "status": "under-development",
-  "dateTimeAddedToRegister": "2024-11-01T00:00:00Z",
   "itemClass": "indicator",
   "register": "bioclima",
   "version": "0.1.0",
@@ -13,5 +12,11 @@
     "ogc.bioclima.ontology.indicator-vocabulary",
     "ogc.bioclima.ontology.policy-vocabulary"
   ],
-  "tags": ["indicator", "zonification", "geojson", "pci"]
+  "tags": [
+    "indicator",
+    "zonification",
+    "geojson",
+    "pci"
+  ],
+  "dateTimeAddition": "2024-11-01T00:00:00Z"
 }

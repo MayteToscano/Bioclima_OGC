@@ -3,11 +3,17 @@
   "name": "Indicator Provenance (W3C PROV)",
   "abstract": "PROV-O record for a computed indicator. References the input EBV bblocks, the implementation script (with git commit hash), and the agent that ran it. Generated automatically by the recompute-indicators GitHub Action and committed alongside the indicator output.",
   "status": "under-development",
-  "dateTimeAddedToRegister": "2024-11-01T00:00:00Z",
   "itemClass": "schema",
   "register": "bioclima",
   "version": "0.1.0",
   "shortName": "indicator-provenance",
-  "dependsOn": ["ogc.bioclima.provenance.ebv-provenance"],
-  "tags": ["provenance", "indicator", "prov-o"]
+  "dependsOn": [
+    "ogc.bioclima.provenance.ebv-provenance"
+  ],
+  "tags": [
+    "provenance",
+    "indicator",
+    "prov-o"
+  ],
+  "dateTimeAddition": "2024-11-01T00:00:00Z"
 }

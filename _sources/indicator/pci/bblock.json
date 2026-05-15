@@ -3,7 +3,6 @@
   "name": "Phenological Change Indicator (PCI)",
   "abstract": "Indicator measuring the rate of change in the start of the vegetation active period. Computed as the weighted mean of per-pixel linear trends (ordinary least squares) of the VAP day-of-year time series for coniferous and deciduous forests. Output is a single-band CoverageJSON expressing trend in days/year, with the same spatial grid as the input EBVs. Python implementation in code/compute.py is automatically re-run by GitHub Actions whenever an upstream EBV bblock changes.",
   "status": "under-development",
-  "dateTimeAddedToRegister": "2024-11-01T00:00:00Z",
   "itemClass": "indicator",
   "register": "bioclima",
   "version": "0.1.0",
@@ -15,5 +14,11 @@
     "ogc.bioclima.coveragejson.bioclima-coverage",
     "ogc.bioclima.ontology.indicator-vocabulary"
   ],
-  "tags": ["indicator", "pci", "phenology", "trend"]
+  "tags": [
+    "indicator",
+    "pci",
+    "phenology",
+    "trend"
+  ],
+  "dateTimeAddition": "2024-11-01T00:00:00Z"
 }

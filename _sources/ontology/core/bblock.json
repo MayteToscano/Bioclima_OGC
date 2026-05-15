@@ -3,7 +3,6 @@
   "name": "BioClima Core Ontology",
   "abstract": "Root ontology for the BioClima register. Declares the bioclima namespace and imports the satellite vocabularies (EBVs, indicators, units, entity types, policies). All semantic resources in the register dereference under this namespace.",
   "status": "under-development",
-  "dateTimeAddedToRegister": "2024-11-01T00:00:00Z",
   "itemClass": "ontology",
   "register": "bioclima",
   "version": "0.1.0",
@@ -25,5 +24,11 @@
     }
   ],
   "dependsOn": [],
-  "tags": ["ontology", "bioclima", "ebv", "biodiversity"]
+  "tags": [
+    "ontology",
+    "bioclima",
+    "ebv",
+    "biodiversity"
+  ],
+  "dateTimeAddition": "2024-11-01T00:00:00Z"
 }

@@ -3,17 +3,24 @@
   "name": "BioClima Policy Vocabulary",
   "abstract": "SKOS vocabulary of policy frameworks relevant to biodiversity indicators: Kunming-Montreal Global Biodiversity Framework targets, SDG 15 (Life on Land), and related items. Used by the policy-alignment block to link indicators to actionable policy.",
   "status": "under-development",
-  "dateTimeAddedToRegister": "2024-11-01T00:00:00Z",
   "itemClass": "ontology",
   "register": "bioclima",
   "version": "0.1.0",
   "shortName": "policy-vocabulary",
-  "dependsOn": ["ogc.bioclima.ontology.core"],
+  "dependsOn": [
+    "ogc.bioclima.ontology.core"
+  ],
   "sources": [
     {
       "title": "Kunming-Montreal Global Biodiversity Framework",
       "link": "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf"
     }
   ],
-  "tags": ["ontology", "policy", "kmgbf", "sdg"]
+  "tags": [
+    "ontology",
+    "policy",
+    "kmgbf",
+    "sdg"
+  ],
+  "dateTimeAddition": "2024-11-01T00:00:00Z"
 }

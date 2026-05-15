@@ -3,11 +3,17 @@
   "name": "Kunming-Montreal GBF Target",
   "abstract": "Schema representing a single target of the Kunming-Montreal Global Biodiversity Framework. The concrete target instances live in the policy-vocabulary ontology; this block defines the structural shape (id, multilingual label and definition, key indicators, deadline) that any policy target must satisfy.",
   "status": "under-development",
-  "dateTimeAddedToRegister": "2024-11-01T00:00:00Z",
   "itemClass": "schema",
   "register": "bioclima",
   "version": "0.1.0",
   "shortName": "kmgbf-target",
-  "dependsOn": ["ogc.bioclima.ontology.policy-vocabulary"],
-  "tags": ["policy", "kmgbf", "biodiversity"]
+  "dependsOn": [
+    "ogc.bioclima.ontology.policy-vocabulary"
+  ],
+  "tags": [
+    "policy",
+    "kmgbf",
+    "biodiversity"
+  ],
+  "dateTimeAddition": "2024-11-01T00:00:00Z"
 }
