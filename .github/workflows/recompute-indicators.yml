@@ -1,0 +1,62 @@
+name: Recompute indicators
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '_sources/ebv/vap-coniferous/examples/**'
+      - '_sources/ebv/vap-deciduous/examples/**'
+      - '_sources/indicator/pci/code/**'
+      - '_sources/indicator/bioclimatic-zone/code/**'
+  workflow_dispatch: {}
+
+jobs:
+  recompute:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install PCI requirements
+        run: pip install -r _sources/indicator/pci/code/requirements.txt
+
+      - name: Compute PCI
+        run: |
+          python _sources/indicator/pci/code/compute.py \
+            --coniferous _sources/ebv/vap-coniferous/examples/finland-vap-coniferous-2001-2018.covjson \
+            --deciduous  _sources/ebv/vap-deciduous/examples/finland-vap-deciduous-2001-2018.covjson \
+            --output     _sources/indicator/pci/examples/pci-finland-2001-2018.covjson
+
+      - name: Compute Bioclimatic zones
+        run: |
+          python _sources/indicator/bioclimatic-zone/code/zonify.py \
+            --pci        _sources/indicator/pci/examples/pci-finland-2001-2018.covjson \
+            --output     _sources/indicator/bioclimatic-zone/examples/finland-zones-2001-2018.geojson \
+            --downsample 4
+
+      - name: Update indicator-provenance with commit hash
+        run: |
+          python scripts/update-provenance.py
+
+      - name: Commit recomputed outputs
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _sources/indicator/pci/examples/ \
+                  _sources/indicator/bioclimatic-zone/examples/ \
+                  _sources/provenance/indicator-provenance/examples/
+          if ! git diff --cached --quiet; then
+            git commit -m "ci: recompute PCI and zones (${{ github.sha }})"
+            git push
+          else
+            echo "No changes to commit."
+          fi

@@ -1,0 +1,20 @@
+@prefix sh:       <http://www.w3.org/ns/shacl#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix bioclima: <https://maytetoscano.github.io/Bioclima_OGC/def/> .
+
+bioclima:EbvDefinitionShape a sh:NodeShape ;
+    sh:targetClass bioclima:EBVDataset ;
+    sh:property [
+        sh:path bioclima:ebvClass ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:pattern "^https://maytetoscano\\.github\\.io/Bioclima_OGC/def/ebv/" ;
+        sh:message "ebv_class must reference a concept in the BioClima EBV vocabulary."@en
+    ] ;
+    sh:property [
+        sh:path bioclima:hasTitle ;
+        sh:minCount 4 ;
+        sh:uniqueLang true ;
+        sh:languageIn ( "en" "es" "zh" "ro" ) ;
+        sh:message "Dataset title must be provided in en, es, zh and ro."@en
+    ] .

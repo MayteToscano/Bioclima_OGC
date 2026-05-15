@@ -1,0 +1,32 @@
+{
+  "@context": {
+    "@vocab": "http://www.w3.org/ns/prov#",
+    "xsd":    "http://www.w3.org/2001/XMLSchema#",
+    "dcterms":"http://purl.org/dc/terms/"
+  },
+  "entity": "https://maytetoscano.github.io/Bioclima_OGC/bblock/ogc.bioclima.ebv.vap-coniferous",
+  "wasDerivedFrom": [
+    "https://laadsweb.modaps.eosdis.nasa.gov/MODIS-Terra-L1B",
+    "https://en.ilmatieteenlaitos.fi/satellite-receiving-station-sodankyla"
+  ],
+  "wasGeneratedBy": {
+    "activity": "Derivation of Start-of-VAP from MODIS Fractional Snow Cover",
+    "startedAtTime": "2020-06-01T00:00:00Z",
+    "endedAtTime":   "2020-11-04T00:00:00Z",
+    "used": [
+      "https://maytetoscano.github.io/Bioclima_OGC/def/algorithm/fsc-sigmoid-fit",
+      "https://maytetoscano.github.io/Bioclima_OGC/def/algorithm/cloud-masking-syke"
+    ],
+    "hadPlan": "https://doi.org/10.1016/j.rse.2013.09.022"
+  },
+  "wasAttributedTo": {
+    "agent": "Kristin Böttcher",
+    "role":  "Principal investigator",
+    "organization": "Finnish Environment Institute (SYKE)"
+  },
+  "qualifiedDerivation": {
+    "@type": "Derivation",
+    "hadActivity": "MODIS L1B calibration and projection (envimon, VTT)",
+    "hadRole": "satellite-preprocessing"
+  }
+}

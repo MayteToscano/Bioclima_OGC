@@ -1,0 +1,78 @@
+[
+  {
+    "id": "vap-coniferous",
+    "bblock": "ogc.bioclima.ebv.vap-coniferous",
+    "kind": "coverage",
+    "title": {
+      "en": "VAP — Coniferous forests (Finland)",
+      "es": "VAP — Bosques de coníferas (Finlandia)",
+      "zh": "VAP — 针叶林(芬兰)",
+      "ro": "VAP — Păduri de conifere (Finlanda)"
+    },
+    "dataUrl": "../_sources/ebv/vap-coniferous/examples/finland-vap-coniferous-2001-2018.covjson",
+    "observedPropertyIri": "https://maytetoscano.github.io/Bioclima_OGC/def/ebv/vap_doy",
+    "unit": { "symbol": "DOY" },
+    "range": [60, 160],
+    "colorRamp": ["#3B8BD4", "#FCDE5A", "#E85D24"],
+    "policyAlignment": [
+      "https://maytetoscano.github.io/Bioclima_OGC/def/policy/kmgbf-target-8",
+      "https://maytetoscano.github.io/Bioclima_OGC/def/policy/sdg-15"
+    ]
+  },
+  {
+    "id": "vap-deciduous",
+    "bblock": "ogc.bioclima.ebv.vap-deciduous",
+    "kind": "coverage",
+    "title": {
+      "en": "VAP — Deciduous vegetation (Finland)",
+      "es": "VAP — Vegetación caducifolia (Finlandia)",
+      "zh": "VAP — 落叶植被(芬兰)",
+      "ro": "VAP — Vegetație foioasă (Finlanda)"
+    },
+    "dataUrl": "../_sources/ebv/vap-deciduous/examples/finland-vap-deciduous-2001-2018.covjson",
+    "observedPropertyIri": "https://maytetoscano.github.io/Bioclima_OGC/def/ebv/vap_doy",
+    "unit": { "symbol": "DOY" },
+    "range": [60, 160],
+    "colorRamp": ["#3B8BD4", "#FCDE5A", "#E85D24"],
+    "policyAlignment": [
+      "https://maytetoscano.github.io/Bioclima_OGC/def/policy/kmgbf-target-8",
+      "https://maytetoscano.github.io/Bioclima_OGC/def/policy/sdg-15"
+    ]
+  },
+  {
+    "id": "pci",
+    "bblock": "ogc.bioclima.indicator.pci",
+    "kind": "coverage",
+    "title": {
+      "en": "PCI — Phenological Change Indicator",
+      "es": "PCI — Indicador de cambio fenológico",
+      "zh": "PCI — 物候变化指标",
+      "ro": "PCI — Indicator al schimbării fenologice"
+    },
+    "dataUrl": "../_sources/indicator/pci/examples/pci-finland-2001-2018.covjson",
+    "observedPropertyIri": "https://maytetoscano.github.io/Bioclima_OGC/def/indicator/pci",
+    "unit": { "symbol": "d/yr" },
+    "range": [-0.8, 0.8],
+    "colorRamp": ["#1D9E75", "#F1EFE8", "#E24B4A"],
+    "policyAlignment": [
+      "https://maytetoscano.github.io/Bioclima_OGC/def/policy/kmgbf-target-8",
+      "https://maytetoscano.github.io/Bioclima_OGC/def/policy/sdg-15"
+    ]
+  },
+  {
+    "id": "bioclimatic-zones",
+    "bblock": "ogc.bioclima.indicator.bioclimatic-zone",
+    "kind": "geojson",
+    "title": {
+      "en": "Bioclimatic zones (PCI-based)",
+      "es": "Zonas bioclimáticas (basadas en PCI)",
+      "zh": "生物气候区(基于 PCI)",
+      "ro": "Zone bioclimatice (pe baza PCI)"
+    },
+    "dataUrl": "../_sources/indicator/bioclimatic-zone/examples/finland-zones-2001-2018.geojson",
+    "policyAlignment": [
+      "https://maytetoscano.github.io/Bioclima_OGC/def/policy/kmgbf-target-1",
+      "https://maytetoscano.github.io/Bioclima_OGC/def/policy/kmgbf-target-8"
+    ]
+  }
+]

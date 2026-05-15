@@ -1,0 +1,29 @@
+################################################################################
+# BioClima OGC Building Blocks - Root configuration
+# Consumed by ogc/bblocks-postprocess to validate and publish the register.
+################################################################################
+
+identifier-prefixes:
+  - ogc.bioclima
+
+subdirs: _sources
+
+sourcesDir: _sources
+generatedDocsRoot: docs/generated
+
+# Where the static site will be hosted (GitHub Pages by default)
+viewerPath: https://maytetoscano.github.io/Bioclima_OGC/
+
+# Tools that the build will run on every block
+testOutputs:
+  - jsonld
+  - jsonschema
+  - shacl
+
+# Where to publish the resulting register.json
+register: build/register.json
+
+# Postprocess options
+schemaJsonLink: true
+annotatedSchemas: true
+generateLDContext: true

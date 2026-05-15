@@ -1,0 +1,25 @@
+{
+  "itemIdentifier": "ogc.bioclima.ontology.ebv-vocabulary",
+  "name": "BioClima EBV Vocabulary",
+  "abstract": "SKOS vocabulary of Essential Biodiversity Variables used in BioClima. Concepts include EBV classes (Ecosystem functioning, Species populations, etc.), EBV names (Ecosystem phenology, Net primary productivity), and the specific observed properties such as 'Start of vegetation active period (vap_doy)'. Every concept carries prefLabel and definition in English, Spanish, Chinese and Romanian.",
+  "status": "under-development",
+  "dateTimeAddedToRegister": "2024-11-01T00:00:00Z",
+  "itemClass": "ontology",
+  "register": "bioclima",
+  "version": "0.1.0",
+  "shortName": "ebv-vocabulary",
+  "dependsOn": [
+    "ogc.bioclima.ontology.core"
+  ],
+  "sources": [
+    {
+      "title": "GeoBON EBV class portal",
+      "link": "https://portal.geobon.org/ebv-classes"
+    },
+    {
+      "title": "Pereira et al. 2013 Essential Biodiversity Variables",
+      "link": "https://doi.org/10.1126/science.1229931"
+    }
+  ],
+  "tags": ["ontology", "ebv", "skos", "biodiversity"]
+}

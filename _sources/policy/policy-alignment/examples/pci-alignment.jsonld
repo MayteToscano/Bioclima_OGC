@@ -1,0 +1,38 @@
+{
+  "indicator": "https://maytetoscano.github.io/Bioclima_OGC/def/indicator/pci",
+  "alignments": [
+    {
+      "target": "https://maytetoscano.github.io/Bioclima_OGC/def/policy/kmgbf-target-8",
+      "relationship": "measures-progress-on",
+      "evidenceStrength": "direct",
+      "justification": {
+        "en": "Earlier or later onset of the growing season is a primary ecological signal of climate change pressure on boreal ecosystems; the PCI quantifies that shift directly.",
+        "es": "El adelanto o retraso del inicio del periodo vegetativo es una señal ecológica primaria de la presión del cambio climático sobre los ecosistemas boreales; el PCI cuantifica ese cambio directamente.",
+        "zh": "生长季开始的提前或延迟是气候变化对北方生态系统压力的主要生态信号;PCI 直接量化了这种变化。",
+        "ro": "Avansul sau întârzierea începutului sezonului de creștere este un semnal ecologic principal al presiunii schimbărilor climatice asupra ecosistemelor boreale; PCI cuantifică această schimbare direct."
+      }
+    },
+    {
+      "target": "https://maytetoscano.github.io/Bioclima_OGC/def/policy/kmgbf-target-1",
+      "relationship": "informs",
+      "evidenceStrength": "indirect",
+      "justification": {
+        "en": "Zones of strong phenological change identified by the PCI can be used as input to participatory spatial planning processes that integrate biodiversity considerations.",
+        "es": "Las zonas de fuerte cambio fenológico identificadas por el PCI pueden utilizarse como entrada para procesos participativos de planificación espacial que integran consideraciones de biodiversidad.",
+        "zh": "PCI 识别的物候强烈变化区可作为整合生物多样性考虑的参与式空间规划过程的输入。",
+        "ro": "Zonele cu schimbări fenologice puternice identificate de PCI pot fi folosite ca intrare în procesele participative de planificare spațială care integrează considerente de biodiversitate."
+      }
+    },
+    {
+      "target": "https://maytetoscano.github.io/Bioclima_OGC/def/policy/sdg-15",
+      "relationship": "supports-reporting-on",
+      "evidenceStrength": "contextual",
+      "justification": {
+        "en": "Phenological monitoring is widely accepted as part of the evidence base for SDG 15 reporting on the integrity of terrestrial ecosystems.",
+        "es": "El seguimiento fenológico está ampliamente aceptado como parte de la base de evidencia para los informes del ODS 15 sobre la integridad de los ecosistemas terrestres.",
+        "zh": "物候监测被广泛接受为可持续发展目标 15 关于陆地生态系统完整性报告的证据基础的一部分。",
+        "ro": "Monitorizarea fenologică este larg acceptată ca parte din baza de dovezi pentru raportarea ODD 15 privind integritatea ecosistemelor terestre."
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "@context": "https://maytetoscano.github.io/Bioclima_OGC/_sources/indicator/indicator-definition/context.jsonld",
+  "id": "https://maytetoscano.github.io/Bioclima_OGC/def/indicator/pci",
+  "label": {
+    "en": "Phenological Change Indicator",
+    "es": "Indicador de cambio fenológico",
+    "zh": "物候变化指标",
+    "ro": "Indicator al schimbării fenologice"
+  },
+  "definition": {
+    "en": "Rate of change of vegetation active period onset, computed as the weighted mean of per-pixel linear trends (ordinary least squares) for coniferous and deciduous forests over the analysis window.",
+    "es": "Tasa de cambio del inicio del periodo activo de vegetación, calculada como media ponderada de tendencias lineales por píxel (mínimos cuadrados) para bosques de coníferas y caducifolios durante la ventana de análisis.",
+    "zh": "植被活动期开始日期的变化率,计算为分析窗口内针叶林和落叶林每像素线性趋势(普通最小二乘)的加权平均值。",
+    "ro": "Rata de schimbare a începutului perioadei active a vegetației, calculată ca media ponderată a tendințelor liniare per pixel (cele mai mici pătrate) pentru pădurile de conifere și foioase în fereastra de analiză."
+  },
+  "inputs": [
+    {
+      "role": "coniferous_series",
+      "ebv": "https://maytetoscano.github.io/Bioclima_OGC/bblock/ogc.bioclima.ebv.vap-coniferous",
+      "constraint": "https://maytetoscano.github.io/Bioclima_OGC/def/entity/coniferous-forest",
+      "minYears": 10
+    },
+    {
+      "role": "deciduous_series",
+      "ebv": "https://maytetoscano.github.io/Bioclima_OGC/bblock/ogc.bioclima.ebv.vap-deciduous",
+      "constraint": "https://maytetoscano.github.io/Bioclima_OGC/def/entity/deciduous-vegetation",
+      "minYears": 10
+    }
+  ],
+  "parameters": {
+    "coniferous_weight": 0.4,
+    "deciduous_weight":  0.6,
+    "trend_method": "ordinary-least-squares",
+    "nodata": -32768,
+    "min_valid_years": 8
+  },
+  "implementation": {
+    "language": "python",
+    "entrypoint": "compute.py#compute_pci",
+    "version": "1.0.0",
+    "requirements": "requirements.txt"
+  },
+  "output": {
+    "unit": "https://maytetoscano.github.io/Bioclima_OGC/def/units/days-per-year",
+    "spatial": "inherits-from-inputs",
+    "format": "CoverageJSON"
+  },
+  "policyAlignment": [
+    "https://maytetoscano.github.io/Bioclima_OGC/def/policy/kmgbf-target-8",
+    "https://maytetoscano.github.io/Bioclima_OGC/def/policy/sdg-15"
+  ]
+}

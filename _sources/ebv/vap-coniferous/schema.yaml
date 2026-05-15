@@ -1,0 +1,23 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "https://maytetoscano.github.io/Bioclima_OGC/bblock/ogc.bioclima.ebv.vap-coniferous/schema.yaml"
+title: "VAP Coniferous Finland - dataset record"
+description: |
+  Concrete EBV record. Validates the metadata.jsonld of this block against
+  the generic ebv-definition schema, with two additional constraints:
+    - the ebv_class must be ecosystem-functioning
+    - the entity type must be coniferous-forest
+
+allOf:
+  - $ref: "../../ebv/ebv-definition/schema.yaml"
+  - type: object
+    properties:
+      ebv:
+        type: object
+        properties:
+          ebv_name:
+            const: "https://maytetoscano.github.io/Bioclima_OGC/def/ebv/ecosystem-phenology"
+      ebv_entity:
+        type: object
+        properties:
+          ebv_entity_type:
+            const: "https://maytetoscano.github.io/Bioclima_OGC/def/entity/coniferous-forest"

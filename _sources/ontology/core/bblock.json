@@ -1,0 +1,29 @@
+{
+  "itemIdentifier": "ogc.bioclima.ontology.core",
+  "name": "BioClima Core Ontology",
+  "abstract": "Root ontology for the BioClima register. Declares the bioclima namespace and imports the satellite vocabularies (EBVs, indicators, units, entity types, policies). All semantic resources in the register dereference under this namespace.",
+  "status": "under-development",
+  "dateTimeAddedToRegister": "2024-11-01T00:00:00Z",
+  "itemClass": "ontology",
+  "register": "bioclima",
+  "version": "0.1.0",
+  "shortName": "core-ontology",
+  "maintainers": [
+    {
+      "name": "BioClima Project",
+      "email": "maite.toscano@upm.es"
+    }
+  ],
+  "sources": [
+    {
+      "title": "W3C SKOS Reference",
+      "link": "https://www.w3.org/TR/skos-reference/"
+    },
+    {
+      "title": "GeoBON EBV class portal",
+      "link": "https://portal.geobon.org/ebv-classes"
+    }
+  ],
+  "dependsOn": [],
+  "tags": ["ontology", "bioclima", "ebv", "biodiversity"]
+}

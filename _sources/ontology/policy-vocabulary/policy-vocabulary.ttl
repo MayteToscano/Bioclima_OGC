@@ -1,0 +1,48 @@
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix bioclima: <https://maytetoscano.github.io/Bioclima_OGC/def/> .
+@prefix pol:      <https://maytetoscano.github.io/Bioclima_OGC/def/policy/> .
+
+###############################################################################
+# KUNMING-MONTREAL TARGETS
+###############################################################################
+
+pol:kmgbf-target-1 a skos:Concept ;
+    skos:inScheme bioclima:policy-scheme ;
+    skos:prefLabel "KMGBF Target 1 - Spatial planning"@en ,
+                   "Meta 1 KMGBF - Planificación espacial"@es ,
+                   "昆蒙框架 目标1 - 空间规划"@zh ,
+                   "Țintă 1 KMGBF - Planificare spațială"@ro ;
+    skos:definition "Ensure all areas under participatory integrated biodiversity inclusive spatial planning by 2030."@en ,
+                    "Garantizar que todas las áreas estén bajo una planificación espacial participativa integrada e inclusiva de la biodiversidad para 2030."@es ,
+                    "确保到 2030 年所有区域都纳入参与式综合生物多样性包容性空间规划。"@zh ,
+                    "Asigurarea că toate zonele se află sub planificare spațială participativă integrată și inclusivă a biodiversității până în 2030."@ro ;
+    dcterms:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+
+pol:kmgbf-target-8 a skos:Concept ;
+    skos:inScheme bioclima:policy-scheme ;
+    skos:prefLabel "KMGBF Target 8 - Climate change adaptation"@en ,
+                   "Meta 8 KMGBF - Adaptación al cambio climático"@es ,
+                   "昆蒙框架 目标8 - 气候变化适应"@zh ,
+                   "Țintă 8 KMGBF - Adaptare la schimbările climatice"@ro ;
+    skos:definition "Minimize the impact of climate change on biodiversity through mitigation, adaptation and disaster risk reduction actions."@en ,
+                    "Minimizar el impacto del cambio climático sobre la biodiversidad mediante acciones de mitigación, adaptación y reducción del riesgo de desastres."@es ,
+                    "通过减缓、适应和减少灾害风险的行动,尽量减少气候变化对生物多样性的影响。"@zh ,
+                    "Minimizarea impactului schimbărilor climatice asupra biodiversității prin acțiuni de atenuare, adaptare și reducere a riscului de dezastre."@ro ;
+    dcterms:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+
+###############################################################################
+# SDG 15 - Life on Land
+###############################################################################
+
+pol:sdg-15 a skos:Concept ;
+    skos:inScheme bioclima:policy-scheme ;
+    skos:prefLabel "SDG 15 - Life on Land"@en ,
+                   "ODS 15 - Vida de ecosistemas terrestres"@es ,
+                   "可持续发展目标 15 - 陆地生物"@zh ,
+                   "ODD 15 - Viața terestră"@ro ;
+    skos:definition "Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, halt and reverse land degradation and halt biodiversity loss."@en ,
+                    "Proteger, restablecer y promover el uso sostenible de los ecosistemas terrestres, gestionar sosteniblemente los bosques, luchar contra la desertificación, detener e invertir la degradación de las tierras y frenar la pérdida de biodiversidad."@es ,
+                    "保护、恢复和促进可持续利用陆地生态系统,可持续管理森林,防治荒漠化,制止和扭转土地退化,遏制生物多样性丧失。"@zh ,
+                    "Protejarea, refacerea și promovarea utilizării durabile a ecosistemelor terestre, gestionarea durabilă a pădurilor, combaterea deșertificării, oprirea și inversarea degradării terenurilor și oprirea pierderii biodiversității."@ro ;
+    dcterms:source <https://sdgs.un.org/goals/goal15> .

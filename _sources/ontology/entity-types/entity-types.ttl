@@ -1,0 +1,35 @@
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix bioclima: <https://maytetoscano.github.io/Bioclima_OGC/def/> .
+@prefix ent:      <https://maytetoscano.github.io/Bioclima_OGC/def/entity/> .
+
+ent:ecosystems a skos:Concept ;
+    skos:inScheme bioclima:entity-scheme ;
+    skos:prefLabel "Ecosystems"@en , "Ecosistemas"@es , "生态系统"@zh , "Ecosisteme"@ro ;
+    skos:definition "Entity type covering ecosystem-level observable units."@en ,
+                    "Tipo de entidad que cubre las unidades observables a nivel de ecosistema."@es ,
+                    "涵盖生态系统层面可观测单元的实体类型。"@zh ,
+                    "Tip de entitate care acoperă unitățile observabile la nivel de ecosistem."@ro .
+
+ent:coniferous-forest a skos:Concept ;
+    skos:inScheme bioclima:entity-scheme ;
+    skos:broader ent:ecosystems ;
+    skos:prefLabel "Coniferous forest"@en ,
+                   "Bosque de coníferas"@es ,
+                   "针叶林"@zh ,
+                   "Pădure de conifere"@ro ;
+    skos:definition "Forest dominated by evergreen needle-leaved trees (spruce, pine, fir)."@en ,
+                    "Bosque dominado por árboles perennifolios de hoja acicular (abeto, pino)."@es ,
+                    "以常绿针叶树(云杉、松、冷杉)为主的森林。"@zh ,
+                    "Pădure dominată de arbori cu frunze aciforme veșnic verzi (molid, pin, brad)."@ro .
+
+ent:deciduous-vegetation a skos:Concept ;
+    skos:inScheme bioclima:entity-scheme ;
+    skos:broader ent:ecosystems ;
+    skos:prefLabel "Deciduous vegetation"@en ,
+                   "Vegetación caducifolia"@es ,
+                   "落叶植被"@zh ,
+                   "Vegetație foioasă"@ro ;
+    skos:definition "Vegetation where leaves are shed during a part of the year, including birch and other broadleaved trees."@en ,
+                    "Vegetación en la que las hojas se desprenden durante una parte del año, incluyendo abedul y otras frondosas."@es ,
+                    "在一年中的部分时间脱落叶子的植被,包括桦树和其他阔叶树。"@zh ,
+                    "Vegetație în care frunzele cad într-o parte a anului, inclusiv mesteacăn și alți arbori cu frunze late."@ro .

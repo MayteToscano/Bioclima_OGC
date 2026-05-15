@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "bioclima": "https://maytetoscano.github.io/Bioclima_OGC/def/",
+    "ebv":      "https://maytetoscano.github.io/Bioclima_OGC/def/ebv/",
+    "skos":     "http://www.w3.org/2004/02/skos/core#",
+    "dcterms":  "http://purl.org/dc/terms/",
+    "sosa":     "http://www.w3.org/ns/sosa/",
+    "label":      { "@id": "skos:prefLabel",  "@container": "@language" },
+    "description":{ "@id": "skos:definition", "@container": "@language" },
+    "broader":    { "@id": "skos:broader",    "@type": "@id" },
+    "source":     { "@id": "dcterms:source",  "@type": "@id" }
+  }
+}

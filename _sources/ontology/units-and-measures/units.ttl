@@ -1,0 +1,37 @@
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix qudt:     <http://qudt.org/schema/qudt/> .
+@prefix bioclima: <https://maytetoscano.github.io/Bioclima_OGC/def/> .
+@prefix units:    <https://maytetoscano.github.io/Bioclima_OGC/def/units/> .
+
+units:day-of-year a skos:Concept ;
+    skos:inScheme bioclima:units-scheme ;
+    skos:prefLabel "Day of year"@en ,
+                   "Día del año"@es ,
+                   "年积日"@zh ,
+                   "Ziua din an"@ro ;
+    skos:definition "Integer 1-366 representing a calendar day position within a year."@en ,
+                    "Entero 1-366 que representa la posición del día calendario dentro del año."@es ,
+                    "整数 1-366,表示年内的日历日位置。"@zh ,
+                    "Întreg 1-366 care reprezintă poziția zilei calendaristice în cadrul anului."@ro ;
+    skos:notation "DOY" .
+
+units:days-per-year a skos:Concept ;
+    skos:inScheme bioclima:units-scheme ;
+    skos:prefLabel "Days per year"@en ,
+                   "Días por año"@es ,
+                   "天每年"@zh ,
+                   "Zile pe an"@ro ;
+    skos:definition "Rate expressed as a number of days change accumulating per calendar year. Used for phenological trends."@en ,
+                    "Tasa expresada como número de días de cambio acumulado por año calendario. Se utiliza para tendencias fenológicas."@es ,
+                    "以每个日历年累积的天数变化表示的速率。用于物候趋势。"@zh ,
+                    "Rată exprimată ca număr de zile de schimbare acumulată pe an calendaristic. Folosită pentru tendințele fenologice."@ro ;
+    skos:notation "d/yr" .
+
+units:degree a skos:Concept ;
+    skos:inScheme bioclima:units-scheme ;
+    skos:prefLabel "Degree"@en , "Grado"@es , "度"@zh , "Grad"@ro ;
+    skos:definition "Angular unit used for geographic coordinates."@en ,
+                    "Unidad angular utilizada para coordenadas geográficas."@es ,
+                    "用于地理坐标的角度单位。"@zh ,
+                    "Unitate unghiulară folosită pentru coordonate geografice."@ro ;
+    skos:exactMatch <http://qudt.org/vocab/unit/DEG> .

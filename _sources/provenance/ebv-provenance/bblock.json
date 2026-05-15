@@ -1,0 +1,16 @@
+{
+  "itemIdentifier": "ogc.bioclima.provenance.ebv-provenance",
+  "name": "EBV Data Provenance (W3C PROV)",
+  "abstract": "Schema and SHACL shape for documenting the lineage of an EBV dataset using W3C PROV-O. Each EBV is modelled as a prov:Entity derived from raw satellite acquisitions, processed by a software agent following a documented plan, and signed by a responsible creator.",
+  "status": "under-development",
+  "dateTimeAddedToRegister": "2024-11-01T00:00:00Z",
+  "itemClass": "schema",
+  "register": "bioclima",
+  "version": "0.1.0",
+  "shortName": "ebv-provenance",
+  "dependsOn": [],
+  "sources": [
+    { "title": "W3C PROV-O", "link": "https://www.w3.org/TR/prov-o/" }
+  ],
+  "tags": ["provenance", "prov-o", "lineage"]
+}
