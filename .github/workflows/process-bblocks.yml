@@ -1,4 +1,5 @@
 name: Validate and process Building Blocks
+
 on:
   workflow_dispatch:
   push:
@@ -6,8 +7,8 @@ on:
       - master
       - main
     paths-ignore:
-      - build
-      - build-local
+      - 'build/**'
+      - 'build-local/**'
 
 permissions:
   contents: write
@@ -18,6 +19,16 @@ jobs:
   validate-and-process:
     name: Validate and process
     uses: opengeospatial/bblocks-postprocess/.github/workflows/validate-and-process.yml@master
+    with:
+      before_postprocess: |
+        echo "build/" >> .git/info/exclude
+        echo "build-local/" >> .git/info/exclude
+        echo ".transforms-sandbox/" >> .git/info/exclude
+
+      before_pages: |
+        rm -rf build/tests
+        find build -type f -size +50M -print -delete || true
+
     secrets:
       sparql_username: ${{ secrets.sparql_username }}
       sparql_password: ${{ secrets.sparql_password }}
