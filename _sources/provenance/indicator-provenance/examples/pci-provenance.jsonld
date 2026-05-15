@@ -10,15 +10,16 @@
   "wasGeneratedBy": {
     "activity": "Compute PCI from VAP-DOY cubes",
     "script": "https://maytetoscano.github.io/Bioclima_OGC/_sources/indicator/pci/code/compute.py",
-    "scriptVersion": "1.0.0",
+    "scriptVersion": "095f7bf20f0abcf8dffe01ccba94bbd0ebb24ec9",
     "startedAtTime": "2024-11-01T12:00:00Z",
-    "endedAtTime": "2024-11-01T12:00:30Z",
+    "endedAtTime": "2026-05-15T13:32:09Z",
     "parameters": {
       "coniferous_weight": 0.4,
       "deciduous_weight": 0.6,
       "trend_method": "ordinary-least-squares",
       "min_valid_years": 8
-    }
+    },
+    "runId": "25920570793"
   },
   "wasAttributedTo": {
     "agent": "github://maytetoscano/Bioclima_OGC/.github/workflows/recompute-indicators.yml",
