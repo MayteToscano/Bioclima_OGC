@@ -1,0 +1,24 @@
+{
+  "itemIdentifier": "ogc.bioclima.indicator.bioclimatic-zone",
+  "name": "Bioclimatic zonification from PCI",
+  "abstract": "Classifies the continuous PCI raster into four categorical zones (stable, mild advance, strong advance, delay) using published thresholds and emits a GeoJSON FeatureCollection enriched with category IRIs and policy references.",
+  "status": "under-development",
+  "dateTimeAddition": "2024-11-01T00:00:00Z",
+  "itemClass": "schema",
+  "register": "bioclima",
+  "version": "0.1.0",
+  "dependsOn": [
+    "ogc.bioclima.indicator.pci"
+  ],
+  "maintainers": [
+    {
+      "name": "BioClima Project",
+      "email": "maite.toscano@upm.es"
+    }
+  ],
+  "tags": [
+    "bioclima",
+    "indicator",
+    "bioclimatic-zone"
+  ]
+}

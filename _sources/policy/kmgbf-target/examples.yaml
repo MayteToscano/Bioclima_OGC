@@ -1,0 +1,5 @@
+- title: KMGBF Target 8 - Climate change adaptation
+  content: A concrete target record.
+  snippets:
+    - language: json
+      ref: examples/target-8.jsonld

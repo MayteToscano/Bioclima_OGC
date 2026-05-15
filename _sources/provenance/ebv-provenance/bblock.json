@@ -1,0 +1,22 @@
+{
+  "itemIdentifier": "ogc.bioclima.provenance.ebv-provenance",
+  "name": "EBV Provenance (W3C PROV)",
+  "abstract": "PROV-O encoded lineage for an EBV dataset: raw inputs, processing activity, agent, methodology citation.",
+  "status": "under-development",
+  "dateTimeAddition": "2024-11-01T00:00:00Z",
+  "itemClass": "schema",
+  "register": "bioclima",
+  "version": "0.1.0",
+  "dependsOn": [],
+  "maintainers": [
+    {
+      "name": "BioClima Project",
+      "email": "maite.toscano@upm.es"
+    }
+  ],
+  "tags": [
+    "bioclima",
+    "provenance",
+    "ebv-provenance"
+  ]
+}

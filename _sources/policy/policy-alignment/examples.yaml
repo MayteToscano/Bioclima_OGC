@@ -1,0 +1,5 @@
+- title: PCI policy alignment
+  content: How the PCI aligns with KMGBF targets and SDG 15.
+  snippets:
+    - language: json
+      ref: examples/pci-alignment.jsonld

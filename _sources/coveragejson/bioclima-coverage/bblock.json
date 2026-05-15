@@ -1,0 +1,27 @@
+{
+  "itemIdentifier": "ogc.bioclima.coveragejson.bioclima-coverage",
+  "name": "BioClima CoverageJSON profile",
+  "abstract": "Profile of the OGC CoverageJSON community standard for BioClima EBV and indicator datasets. Requires EPSG:4326 for spatial axes, allows an optional temporal axis with ISO 8601 values, and requires every parameter to declare an observedProperty.id resolvable in the BioClima ontology with labels in English, Spanish, Chinese and Romanian.",
+  "status": "under-development",
+  "dateTimeAddition": "2024-11-01T00:00:00Z",
+  "itemClass": "schema",
+  "register": "bioclima",
+  "version": "0.1.0",
+  "sources": [
+    {
+      "title": "CoverageJSON 1.0 specification",
+      "link": "https://covjson.org/spec/"
+    },
+    {
+      "title": "OGC 21-069r2 CoverageJSON Community Standard",
+      "link": "https://docs.ogc.org/cs/21-069r2/21-069r2.html"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "BioClima Project",
+      "email": "maite.toscano@upm.es"
+    }
+  ],
+  "tags": ["coveragejson", "ogc", "profile", "schema"]
+}

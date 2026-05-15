@@ -1,0 +1,24 @@
+{
+  "itemIdentifier": "ogc.bioclima.provenance.indicator-provenance",
+  "name": "Indicator Provenance (W3C PROV)",
+  "abstract": "PROV-O record for a computed indicator: references EBV inputs, the Python implementation by URL, the git commit hash and the GitHub Actions run id.",
+  "status": "under-development",
+  "dateTimeAddition": "2024-11-01T00:00:00Z",
+  "itemClass": "schema",
+  "register": "bioclima",
+  "version": "0.1.0",
+  "dependsOn": [
+    "ogc.bioclima.provenance.ebv-provenance"
+  ],
+  "maintainers": [
+    {
+      "name": "BioClima Project",
+      "email": "maite.toscano@upm.es"
+    }
+  ],
+  "tags": [
+    "bioclima",
+    "provenance",
+    "indicator-provenance"
+  ]
+}

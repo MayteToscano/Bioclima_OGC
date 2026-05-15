@@ -1,0 +1,25 @@
+{
+  "itemIdentifier": "ogc.bioclima.ebv.vap-deciduous",
+  "name": "VAP Deciduous Finland 2001-2018",
+  "abstract": "Concrete EBV dataset: yearly maps of the start of the Vegetation Active Period in deciduous vegetation of Finland, 2001-2018, derived from MODIS NDWI. The CoverageJSON file is stored in this block's examples/ directory.",
+  "status": "under-development",
+  "dateTimeAddition": "2024-11-01T00:00:00Z",
+  "itemClass": "schema",
+  "register": "bioclima",
+  "version": "0.1.0",
+  "dependsOn": [
+    "ogc.bioclima.ebv.ebv-definition",
+    "ogc.bioclima.coveragejson.bioclima-coverage"
+  ],
+  "maintainers": [
+    {
+      "name": "BioClima Project",
+      "email": "maite.toscano@upm.es"
+    }
+  ],
+  "tags": [
+    "bioclima",
+    "ebv",
+    "vap-deciduous"
+  ]
+}

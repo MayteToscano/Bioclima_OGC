@@ -1,0 +1,10 @@
+- title: CoverageJSON cube
+  content: The full 2001-2018 raster cube for coniferous forests.
+  snippets:
+    - language: json
+      ref: examples/finland-vap-coniferous-2001-2018.covjson
+- title: GeoBON metadata record
+  content: GeoBON-style metadata describing the dataset.
+  snippets:
+    - language: json
+      ref: examples/metadata.jsonld

@@ -1,0 +1,27 @@
+{
+  "itemIdentifier": "ogc.bioclima.indicator.pci",
+  "name": "Phenological Change Indicator (PCI)",
+  "abstract": "Rate of change of vegetation active period onset, computed as the weighted mean of per-pixel linear trends for coniferous and deciduous forests over the analysis window. Includes the Python implementation in code/compute.py and an example output for Finland 2001-2018.",
+  "status": "under-development",
+  "dateTimeAddition": "2024-11-01T00:00:00Z",
+  "itemClass": "schema",
+  "register": "bioclima",
+  "version": "0.1.0",
+  "dependsOn": [
+    "ogc.bioclima.indicator.indicator-definition",
+    "ogc.bioclima.ebv.vap-coniferous",
+    "ogc.bioclima.ebv.vap-deciduous",
+    "ogc.bioclima.coveragejson.bioclima-coverage"
+  ],
+  "maintainers": [
+    {
+      "name": "BioClima Project",
+      "email": "maite.toscano@upm.es"
+    }
+  ],
+  "tags": [
+    "bioclima",
+    "indicator",
+    "pci"
+  ]
+}

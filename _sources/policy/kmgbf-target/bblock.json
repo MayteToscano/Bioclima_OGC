@@ -1,0 +1,22 @@
+{
+  "itemIdentifier": "ogc.bioclima.policy.kmgbf-target",
+  "name": "Kunming-Montreal GBF Target",
+  "abstract": "Schema for a single target of the Kunming-Montreal Global Biodiversity Framework: target number, multilingual label and definition, deadline, key indicators.",
+  "status": "under-development",
+  "dateTimeAddition": "2024-11-01T00:00:00Z",
+  "itemClass": "schema",
+  "register": "bioclima",
+  "version": "0.1.0",
+  "dependsOn": [],
+  "maintainers": [
+    {
+      "name": "BioClima Project",
+      "email": "maite.toscano@upm.es"
+    }
+  ],
+  "tags": [
+    "bioclima",
+    "policy",
+    "kmgbf-target"
+  ]
+}

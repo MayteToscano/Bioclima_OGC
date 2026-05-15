@@ -1,0 +1,22 @@
+{
+  "itemIdentifier": "ogc.bioclima.ebv.ebv-definition",
+  "name": "EBV Definition (generic)",
+  "abstract": "Generic schema describing an Essential Biodiversity Variable dataset following the GeoBON inventory model. Concrete EBVs (such as vap-coniferous) inherit this template and provide their actual CoverageJSON file inside their own examples/ folder.",
+  "status": "under-development",
+  "dateTimeAddition": "2024-11-01T00:00:00Z",
+  "itemClass": "schema",
+  "register": "bioclima",
+  "version": "0.1.0",
+  "dependsOn": [],
+  "maintainers": [
+    {
+      "name": "BioClima Project",
+      "email": "maite.toscano@upm.es"
+    }
+  ],
+  "tags": [
+    "bioclima",
+    "ebv",
+    "ebv-definition"
+  ]
+}

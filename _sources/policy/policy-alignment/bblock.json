@@ -1,0 +1,25 @@
+{
+  "itemIdentifier": "ogc.bioclima.policy.policy-alignment",
+  "name": "Indicator to Policy Alignment",
+  "abstract": "Describes how a BioClima indicator aligns with KMGBF targets or SDGs: relationship type (informs, measures-progress-on, triggers-action-for, supports-reporting-on), evidence strength and multilingual justification.",
+  "status": "under-development",
+  "dateTimeAddition": "2024-11-01T00:00:00Z",
+  "itemClass": "schema",
+  "register": "bioclima",
+  "version": "0.1.0",
+  "dependsOn": [
+    "ogc.bioclima.indicator.indicator-definition",
+    "ogc.bioclima.policy.kmgbf-target"
+  ],
+  "maintainers": [
+    {
+      "name": "BioClima Project",
+      "email": "maite.toscano@upm.es"
+    }
+  ],
+  "tags": [
+    "bioclima",
+    "policy",
+    "policy-alignment"
+  ]
+}

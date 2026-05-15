@@ -1,0 +1,22 @@
+{
+  "itemIdentifier": "ogc.bioclima.indicator.indicator-definition",
+  "name": "Indicator Definition (generic)",
+  "abstract": "Generic recipe-style schema for a biodiversity indicator: declares inputs (which EBVs), parameters, output unit, implementation entry point, and policy alignment.",
+  "status": "under-development",
+  "dateTimeAddition": "2024-11-01T00:00:00Z",
+  "itemClass": "schema",
+  "register": "bioclima",
+  "version": "0.1.0",
+  "dependsOn": [],
+  "maintainers": [
+    {
+      "name": "BioClima Project",
+      "email": "maite.toscano@upm.es"
+    }
+  ],
+  "tags": [
+    "bioclima",
+    "indicator",
+    "indicator-definition"
+  ]
+}

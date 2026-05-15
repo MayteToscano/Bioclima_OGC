@@ -1,0 +1,25 @@
+{
+  "itemIdentifier": "ogc.bioclima.ebv.vap-coniferous",
+  "name": "VAP Coniferous Finland 2001-2018",
+  "abstract": "Concrete EBV dataset: yearly maps of the start of the Vegetation Active Period in coniferous forests of Finland, 2001-2018, derived from MODIS Fractional Snow Cover. The CoverageJSON file is stored in this block's examples/ directory.",
+  "status": "under-development",
+  "dateTimeAddition": "2024-11-01T00:00:00Z",
+  "itemClass": "schema",
+  "register": "bioclima",
+  "version": "0.1.0",
+  "dependsOn": [
+    "ogc.bioclima.ebv.ebv-definition",
+    "ogc.bioclima.coveragejson.bioclima-coverage"
+  ],
+  "maintainers": [
+    {
+      "name": "BioClima Project",
+      "email": "maite.toscano@upm.es"
+    }
+  ],
+  "tags": [
+    "bioclima",
+    "ebv",
+    "vap-coniferous"
+  ]
+}
